@@ -33,11 +33,11 @@ public class Review {
 		}
 		
 		// The while loop equivalent of a for loop
-		int i = 0;
-		while (i < numbers.length) {
-			max = Math.max(max, numbers[i]);
-			i++;
-		}
+//		int i = 0;
+//		while (i < numbers.length) {
+//			max = Math.max(max, numbers[i]);
+//			i++;
+//		}
 		
 		return max; // This will be replaced
 	}
@@ -56,8 +56,7 @@ public class Review {
 	
 	// I want to determine what I'm gonna do with my afternoon, but what I do is dependent on the weather
 	public static void planAfternoon(String weather) {
-		
-		if (weather.equals("Sunny")) {
+		if (weather.equals("sunny")) { 
 			System.out.println("I am going to go to the gym!");
 		} 
 		else if(weather.equals("Rainy") || weather.equals("Snowy")) {
@@ -163,7 +162,16 @@ public class Review {
 		int sum = Functions.calculateSum(1, 2);
 		System.out.println(sum);
 		
-		spendingGame(10000);
+//		spendingGame(10000);
+		
+		String stringifiedNumber = "400";
+		int numberFromString = Integer.parseInt(stringifiedNumber);
+		
+		System.out.println(numberFromString);
+		System.out.println(numberFromString + 1);
+		
+		int[] moreNumbers = {1, 20, 6, 4};
+		System.out.println(findMax(moreNumbers));
 	}
 
 }

@@ -1,6 +1,8 @@
 // The current package that we're in
 package com.skillstorm.week1.day1;
 
+import com.skillstorm.week1.day5.Review;
+
 /*
  * public - Must be public to be run
  * class - Everything in Java is a class.
@@ -10,6 +12,10 @@ package com.skillstorm.week1.day1;
  * } - Close curly brace. Ends the class definition
  */
 public class HelloWorld {
+	
+	public static int calcSum() {
+		return 0;
+	}
 	
 	/*
 	 * public - Same as above
@@ -23,6 +29,11 @@ public class HelloWorld {
 	public static void main(String[] args) {
 		// sysout CTL + space
 		System.out.println("Hello World");
+		
+		int[] numbers = {1, 2, 5, 3, 9, 4};
+		
+		System.out.println(Review.findMax(numbers));
+		
 	}
 }
 
