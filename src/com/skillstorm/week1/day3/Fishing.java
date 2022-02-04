@@ -22,7 +22,6 @@ public class Fishing {
 		if (inches < 8 || inches > 30) {
 			return false; // Release fish
 		}
-	
 		return true; // Keep fish
 	}
 	

@@ -49,6 +49,8 @@ public class Review {
 		int[] nums = new int[5];
 		int number; // Variable declaration
 		
+		String word = "John";
+		
 		
 		number = 54;
 		System.out.println(number);
