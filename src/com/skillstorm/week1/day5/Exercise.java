@@ -10,7 +10,12 @@ public class Exercise {
 	 * You may assume the data is always valid and in the right column
 	 */
 	public static void printCarDetails(String csv) {
+		for (int i = 0; i < 10; i++); // Don't use a semicolon for loops
 		
+		for (int i = 0; i < 10; i++) {
+			
+		}
+		System.out.println("Hello World!");
 	}
 	
 	public static void main(String[] args) {
