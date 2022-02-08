@@ -2,7 +2,14 @@ package com.skillstorm.week2.day1;
 
 public class Review {
 	
+	int age = 10;
+	
 	public static boolean isEven(int num) {
+		int x;
+		if (true) {
+			x = 15;
+		}
+		System.out.println(x);
 		return num % 2 == 0;
 	}
 	
@@ -17,8 +24,23 @@ public class Review {
 	public static boolean canVote(int age) {
 		return true;
 	}
+	
+	
+	
+	
+	static void myFunction() {
+		int myVariable = 5;
+	}
+	
 
 	public static void main(String[] args) {
+	
+		int myVariable = 10;
+		System.out.println(myVariable);
+		
+		
+		
+		
 		
 		int[] nums = new int[3]; // 0 -> 1 -> 2
 		

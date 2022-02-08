@@ -46,6 +46,10 @@ public class Car {
 		this.isNew = isNew;
 	}
 	
+	public void drive() {
+		System.out.println("Inside no-arg drive method");
+	}
+	
 	public void drive(int miles) {
 		this.totalMileage += miles;
 		if (this.totalMileage >= 1000) {
@@ -67,7 +71,7 @@ public class Car {
 		System.out.println("Is the car still new? " + modelT.isNew);
 		modelT.drive(1000);
 		System.out.println("Is the car still new? " + modelT.isNew);
-		peanutButter.drive(10);
-		System.out.println(modelT + " " + peanutButter); // Memory addresses
+		peanutButter.drive();
+		System.out.println(modelT); // Memory addresses
 	}
 }
