@@ -18,7 +18,7 @@ public class Bear {
 		System.out.println("This bear will be created with " + footSize + " feet as a foot size");
 		System.out.println("This bear will be created with " + furColor + " fur");
 		System.out.println("This bear will be created as a " + size + " bear");
-		// Setting the variables to the bear object
+		// Setting the parameters to the bear object
 		this.numTeeth = numTeeth;
 		this.footSize = footSize;
 		this.furColor = furColor;
