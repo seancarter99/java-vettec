@@ -39,6 +39,51 @@ public class Driver {
 		
 		System.out.println(Rectangle.SUM_OF_INTERIOR_ANGLES);
 		System.out.println(Rectangle.INTERIOR_ANGLE);
+	
+		String[] classes = {"Math", "Biology", "Art", "US History", "Computer Science", "Statistics"};
+		Student mark = new Student("Mark", "Wahlberg", "Georgia Tech", 4.0f, 1, classes);
+		Student molly = new Student("Molly", "Johnson", "Stanford", 3.2f, 2, classes);
+		// Student object allows to access all the data from one variable
+		// Opposed to this below, where we have to keep track many many variables
+//		String sallyFirstName = "Sally";
+//		String sallyLastName = "Johsnon";
+//		String sallySchoolName = "Stanford";
+//		float sallyGpa = 3.2f;
+//		int sallyId = 2;
+		
+		
+		// Memory Address that points to the actual data
+		
+		String[] courses = mark.getCourses(); // C4
+		
+		courses = new String[5]; // This would change C4 -> B2
+		
+		System.out.println(courses == mark.getCourses()); // C4 == C4
+		
+		for (String course : courses) {
+			System.out.println(course);
+		}
+		
+		// Changing the courses array here also changes the courses array in my object
+		courses[0] = "Calculus";
+		float gpa = mark.getGpa();
+		gpa = 2.0f;
+		System.out.println("Mark's GPA after editing local variable: " + mark.getGpa());
+		
+		System.out.println("\n\nCourses after editing local variable courses: ");
+		for (String course : mark.getCourses()) {
+			System.out.println(course);
+		}
+		
+		System.out.println(mark);
+		// mark -> h18
+		Student sally = mark; // Student Sally = H18
+		sally.setFirstName("Sally");
+		System.out.println("Mark's first name is now: " + mark.getFirstName());
+		mark.setFirstName("Mark");
+		
+		System.out.println("Sally's first name is now: " + sally.getFirstName());
+	
 	}
 
 }

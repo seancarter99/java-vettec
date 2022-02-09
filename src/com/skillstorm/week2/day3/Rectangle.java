@@ -4,6 +4,8 @@ public class Rectangle {
 	
 	// Instance variables go here
 	// Individual properties of our Rectangle
+	
+	// All variables should be private by default
 	private double length;
 	private double width;
 	// Double width would default to null
