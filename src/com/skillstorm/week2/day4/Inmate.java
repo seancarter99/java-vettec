@@ -47,25 +47,11 @@ public class Inmate {
 			return "5";
 		else 
 			return "1";
-//		if (this.crime == "murder")
-//			sentence = "life";
-//		if (this.crime == "assault")
-//			sentence = "2";
-//		if (this.crime == "pettyTheft")
-//			sentence = "1";
-//		if (this.crime == "armedRob")
-//			sentence = "10";
-//		if (this.crime == "grandTheft")
-//			sentence = "5";
-//		if (this.crime == "sexCrime")
-//			sentence = "5";
-		
-		
-		//murder good behavior boolean null
-		//grandTheft
-		//petyTheft
-		//assault
-		//sexCrime
+	}
+	
+	public boolean hasGoodBehavior() {
+		// Logic that determines whether the inmate has had good behavior or not
+		return true;
 	}
 	
 	// This function just determines if a person is good for their parole
@@ -76,6 +62,8 @@ public class Inmate {
 			System.out.println("You are not cleared for parole due to your life sentence");
 			return;
 		}
+		// We could use hasGoodBehavior to factor in on the parole status
+		
 		double totalSentenceTime = Double.parseDouble(sentence);
 		double sentenceRemaining = calculateRemainingSentence(totalSentenceTime);
 		
