@@ -25,6 +25,8 @@ public class AnimalDriver {
 		zoo[0] = dolphin;
 		zoo[1] = tabby;
 		zoo[2] = defaultCat;
+		
+		System.out.println(dolphin);
 	}
 
 }

@@ -17,10 +17,14 @@ public class Animal { // If noting specified, Java extends Object
 	}
 	
 	public Animal(String color, String favoriteFood, int age, String name) {
-		this.color = color;
+		if (color == null) {
+			this.color = "";
+		} else {
+			this.color = color;
+		}
 		this.favoriteFood = favoriteFood;
-		this.age = age;
-		this.name = name;
+		this.age = age < 0 ? 0 : age;
+		this.name = (name == null) ? "N/A" : name; // If the name is null, set name to a "", otherwise set name to name
 	}
 	
 	public String getColor() {
@@ -61,14 +65,25 @@ public class Animal { // If noting specified, Java extends Object
 	
 	// I can pass in other animals
 	public void eatOtherAnimal(Animal animal) {
-		System.out.println("I am " + this.name + " and I am eating " + animal.name);
+		// If the animal passed in is null, this throws a null pointer exception
+		if (animal != null) {
+			System.out.println("I am " + this.name + " and I am eating " + animal.name);
+		}
 	}
-	
+		
 	// What overriding toString does, is it allows us to choose what happens we print our object (or convert it to a String)
 	@Override
 	public String toString() {
+		
+		/*
+		 * Color: Blue
+		 * Favorite Food: Pizza
+		 * Age: 12
+		 * Name: Waldo
+		 */
+		
 		// Return the string to print
-		return "Color: " + this.color + "\nFavorite Food: " + this.favoriteFood 
-				+ "\nAge: " + this.age + "\nName: " + this.name + "\n";
+		return ("Color: " + this.color + "\nFavorite Food: " + this.favoriteFood 
+				+ "\nAge: " + this.age + "\nName: " + this.name + "\n");
 	}
 }
