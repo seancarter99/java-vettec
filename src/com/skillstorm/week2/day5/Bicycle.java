@@ -6,6 +6,7 @@ public class Bicycle implements Driveable, Brakeable {
 	private float tirePressure;
 	private String color;
 	private String make;
+	private String owner;
 	
 	public float getTirePressure() {
 		return tirePressure;

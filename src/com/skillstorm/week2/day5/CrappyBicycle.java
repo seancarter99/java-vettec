@@ -12,6 +12,12 @@ public class CrappyBicycle implements Driveable {
 	// To do that, I have to implement the interface explicitly
 	public void brakeVehicle() {
 		System.out.println("Braking my crappy bike!");
+		// Instanceof
+		Object o = 1;
+		if (o instanceof String) {
+			String myString = (String) o;
+			myString.charAt(0);
+		}
 	}
 
 

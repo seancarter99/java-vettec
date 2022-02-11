@@ -24,6 +24,9 @@ public class FootballDriver {
 		
 		System.out.println("Team name: " + lions.getTeamName());
 		System.out.println("Team points: " + lions.getNumPoints());
+		
+		// Assigns it to the variable giants   Creating an instance of the FootballTeam class
+		FootballTeam giants = new FootballTeam("Giants", 0); // Example of instantiation
 	}
 
 }

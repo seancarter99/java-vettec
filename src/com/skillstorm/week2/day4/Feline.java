@@ -9,6 +9,7 @@ package com.skillstorm.week2.day4;
  */
 
 // The syntax for inheriting from a parent class
+//           Child          Parent
 public class Feline extends Animal {
 
 	// Here is where we define properties specific to a cat

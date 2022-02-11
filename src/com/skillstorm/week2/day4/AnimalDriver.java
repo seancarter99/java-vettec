@@ -26,7 +26,33 @@ public class AnimalDriver {
 		zoo[1] = tabby;
 		zoo[2] = defaultCat;
 		
+		HouseCat[] cats = new HouseCat[2];
+		cats[0] = tabby;
+		cats[1] = defaultCat;
+		
+		for (HouseCat cat : cats) {
+			
+		}
+		
 		System.out.println(dolphin);
+		
+		for (int i = 0; i < 5; i++) {
+			System.out.println("Setting animal at index " + i);
+			zoo[i] = new Animal("Green", "Fish", 10, "Mittens");
+		}
+		
+		int count = 0;
+		for (Animal animal : zoo) {
+			System.out.println("Animal at index " + count);
+			System.out.println(animal);
+			count++;
+		}
+		
+		int[] nums = {1, 2, 3};
+		
+		System.out.println(nums[0]);
+		nums[0] = 2;
+		System.out.println(nums[0]);
 	}
 
 }

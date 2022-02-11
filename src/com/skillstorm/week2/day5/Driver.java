@@ -26,17 +26,21 @@ public class Driver {
 		methodOfTransport.driveVehicle();
 	}
 	
+	
+	/*
+	 * This is runtime polymorphism
+	 * 
+	 * Compile time polymorphism is the overloading of functions
+	 * Runtime polymorphism is passing objects of different data types and acting on them altogether
+	 */
 	public static void brakeEntity(Brakeable vehicle) {
 		vehicle.brakeVehicle();
 	}
 	
-	public static int calcSum(int x, int y) {
-		int sum = x + y;
-		return sum;
-	}
-	
 	public static void main(String[] args) {
+		// Instantiate means to create an instance of a class
 //		Driveable drive = new Driveable(); // Cannot instantiate interface
+//		Shape shape = new Shape(); // Cannot instantiate abstract class
 		Driveable.sayHello();
 		
 		Bicycle bike = new Bicycle();
@@ -62,6 +66,17 @@ public class Driver {
 		driveEntity(silver);
 		driveEntity(scooter);
 		driveEntity(null);
+		
+		Driveable[] myGarage = new Driveable[10];
+		myGarage[0] = bike;
+		myGarage[1] = new Bicycle();
+		myGarage[2] = crappyBike;
+		myGarage[3] = silver;
+		myGarage[4] = scooter;
+//		myGarage[5] = "apple";
+//		myGarage[6] = 10.4f;
+//		myGarage[7] = true;
+//		myGarage[8] = 'l';
 		
 	}
 
