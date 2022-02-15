@@ -19,6 +19,8 @@ public class Driver {
 		driveVehicle(null);
 		
 		RaceCar racer = new RaceCar(); // Cannot instantiate an abstract class
+		
+		Driveable dr = new Car();
 	}
 
 }

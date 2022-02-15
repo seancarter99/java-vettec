@@ -18,6 +18,14 @@ public abstract class Shape {
 	// There's no way for me to have the knowledge of how to calculate the area of some random shape
 	// BUT I do know that each shape will need that ability
 	
+	public Shape() {
+		
+	}
+	
+	public Shape(String color) {
+		
+	}
+	
 	public String getColor() {
 		return this.color;
 	}
@@ -27,4 +35,6 @@ public abstract class Shape {
 	}
 	
 	public abstract double getArea();
+	
+	public abstract String getType();
 }

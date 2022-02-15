@@ -37,6 +37,10 @@ public class Driver {
 		vehicle.brakeVehicle();
 	}
 	
+	public static void brakeEntity() {
+		System.out.println("Slightly different brakeFunction()");
+	}
+	
 	public static void main(String[] args) {
 		// Instantiate means to create an instance of a class
 //		Driveable drive = new Driveable(); // Cannot instantiate interface
@@ -54,6 +58,7 @@ public class Driver {
 		bike.setColor("blue");
 		driveEntity(bike);
 		brakeEntity(bike);
+		brakeEntity();
 		
 		CrappyBicycle crappyBike = new CrappyBicycle();
 		driveEntity(crappyBike); // This is allowed since my crappyBike IS a driveable object
@@ -78,6 +83,22 @@ public class Driver {
 //		myGarage[7] = true;
 //		myGarage[8] = 'l';
 		
+		// Polymorphism
+		// Since they're Shapes, I can use getArea
+		Shape[] shapes = new Shape[5];
+		
+		shapes[0] = new Square(10);
+		shapes[1] = new Circle(5);
+		shapes[2] = new Triangle(10, 5);
+		shapes[3] = new Triangle(2, 4);
+		shapes[4] = new Square(6);
+		
+		System.out.println("Printing the shapes array: \n\n");
+		for (Shape shape : shapes) {
+			System.out.println("The type of shape this is: " + shape.getType());
+			System.out.println("The area of this shape is: " + shape.getArea());
+			System.out.println();
+		}
 	}
 
 }

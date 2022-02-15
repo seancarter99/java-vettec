@@ -1,5 +1,10 @@
 package com.skillstorm.week2.day5;
 
+// This IS allowed, but it's local to this file. I cannot import it
+interface Transport {
+	public void move();
+}
+
 // In order to use our interface, we can use the implements keyword to "inherit" from it
 public class Bicycle implements Driveable, Brakeable {
 	

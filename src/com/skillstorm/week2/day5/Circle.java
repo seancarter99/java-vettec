@@ -1,22 +1,23 @@
 package com.skillstorm.week2.day5;
 
-public class Square extends Shape {
+public class Circle extends Shape {
 
-	private double length;
+	private double radius;
 	
-	public Square(double length) {
-		this.length = length;
+	public Circle(double radius) {
+		this.radius = radius;
 	}
 	
 	@Override
 	public double getArea() {
 		// TODO Auto-generated method stub
-		return this.length * this.length;
+		return Math.PI * Math.pow(radius, 2);
 	}
 
 	@Override
 	public String getType() {
 		// TODO Auto-generated method stub
-		return "Square";
+		return "Circle";
 	}
+
 }
