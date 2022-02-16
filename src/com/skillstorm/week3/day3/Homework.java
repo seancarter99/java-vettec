@@ -9,6 +9,12 @@ public class Homework {
 		return 0;
 	}
 	
+	// Bonus Challenge
+	public static int findMin(int[][] numbers) {
+		// Your code here
+		return 0;
+	}
+	
 	public static void main(String[] args) {
 		int[][] numberSet1 = {{5, 6, -3}, {-5, 2}, {23}, {12, 14, 9}};
 		int[][] numberSet2 = {{-12, -45}, {-22}, {-8, -9, -6}};
