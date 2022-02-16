@@ -1,7 +1,5 @@
 package com.skillstorm.week3.day1.practice;
 
-import java.util.Scanner;
-
 public class Band {
 
 	// Step 1: What makes a music artist
@@ -43,6 +41,7 @@ public class Band {
 	}
 	
 	public static void main(String[] args) {
+		// I gotta pass the constructor an array and it's easier to do it here
 		String[] beatlesMembers =  {"John", "Paul", "George", "Ringo"};
 		Band band = new Band("The Beatles", beatlesMembers);
 		System.out.println(band.getName());
