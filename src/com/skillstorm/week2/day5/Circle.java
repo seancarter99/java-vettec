@@ -10,13 +10,15 @@ public class Circle extends Shape {
 	
 	@Override
 	public double getArea() {
-		// TODO Auto-generated method stub
 		return Math.PI * Math.pow(radius, 2);
+	}
+	
+	public double getCircumference() {
+		return Math.PI * 2 * this.radius;
 	}
 
 	@Override
 	public String getType() {
-		// TODO Auto-generated method stub
 		return "Circle";
 	}
 

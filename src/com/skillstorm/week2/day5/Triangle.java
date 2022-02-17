@@ -12,14 +12,16 @@ public class Triangle extends Shape {
 	
 	@Override
 	public double getArea() {
-		// TODO Auto-generated method stub
 		return 0.5 * base * height;
 	}
 
 	@Override
 	public String getType() {
-		// TODO Auto-generated method stub
 		return "Triangle";
 	}
 
+	@Override
+	public String toString() {
+		return "Triangle with base (" + this.base + ") and height (" + this.height + ")";
+	}
 }

@@ -91,6 +91,8 @@ public class ArraysRevisited {
 			System.out.println(friendsLists[i]);
 		}
 		
+		System.out.println(friendsLists[2][0]);
+		
 		System.out.println();
 		
 		System.out.println(friendsLists[1]);
