@@ -23,7 +23,7 @@ public abstract class Animal {
 	}
 	
 	public Animal(String color, ArrayList<String> diet) {
-		if (diet == null || diet.isEmpty()) {
+		if (diet == null) {
 			throw new IllegalArgumentException("Diet must not be null");
 		}
 		this.color = color;
@@ -54,11 +54,23 @@ public abstract class Animal {
 		this.diet = new ArrayList<>(diet);
 	}
 	
+	public void addToDiet(String food) {
+		this.diet.add(food);
+	}
+	
 	public void eat(String food) {
 		// What if diet is null?
 		if (diet.contains(food)) {
 			System.out.println("Nom nom nom");
 		}
+	}
+	
+	public void eat() {
+		
+	}
+	
+	public String toString() {
+		return "The color of the animal is: " + this.color;
 	}
 	
 	// Abstract methods have no definition. That's the subclass's problem

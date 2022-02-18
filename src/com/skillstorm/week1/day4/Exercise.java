@@ -16,6 +16,14 @@ public class Exercise {
 		return max;
 	}
 	
+	// [0, 1, 2, 5, 7, 10]
+	public static int findMaxWithSortedArray(int[] numbers) {
+		if (numbers == null || numbers.length == 0) {
+			return 0;
+		}
+		return numbers[numbers.length - 1];
+	}
+	
 	/*
 	 * Function that returns the minimum number in an array
 	 */

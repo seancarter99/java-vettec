@@ -46,6 +46,22 @@ public class AnimalDriver {
 		
 		System.out.println("ArrayList names: " + names);
 		System.out.println("Standard array names: " + otherNames);
+		
+		ArrayList<String> newDiet = new ArrayList<>();
+		Pig myAnimal = new Pig();
+		myAnimal.setDiet(newDiet);
+		System.out.println(myAnimal.getDiet());
+		newDiet.add("Apples");
+		newDiet.add("Carrots");
+		System.out.println(myAnimal.getDiet());
+		myAnimal.setDiet(newDiet);
+		System.out.println(myAnimal.getDiet());
+		myAnimal.addToDiet("Slop");
+		System.out.println(myAnimal.getDiet());
+		
+		
+		Dog fido = new Dog("Blue");
+		System.out.println(fido.toString());
 	}
 
 }
