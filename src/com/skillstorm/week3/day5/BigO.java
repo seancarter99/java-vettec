@@ -1,6 +1,7 @@
 package com.skillstorm.week3.day5;
 
 public class BigO {
+	// {5, 6, 3, 5, 6, 7, 1, 4, 7, 2}
 	
 	// Return true if the number 2 is found, false otherwise
 	public static boolean findTheNumber2(int[] nums) {
@@ -17,6 +18,8 @@ public class BigO {
 		// 2 was not in the array given
 		return false;
 	}
+	
+	// {1, 1, 1, 1, 1, 1, 1, 1}
 	
 	// Best case and worst case stay the same
 	// Average case improves by a lot

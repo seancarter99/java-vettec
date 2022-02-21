@@ -19,19 +19,7 @@ public class ExceptionPractice {
 			throw new MyException("Must provide a valid age");
 		}
 		
-	}
-	
-	public static void main(String[] args) {
-		callPrintName(null);
-		try {
-			verifyStringIsAge("20fd");
-			System.out.println("The string was valid");
-		} catch (MyException e) {
-			System.out.println("The string provided was not a valid age");
-		}
-	}
-	
-	
+	}	
 	
 	// At compile time, my function needs to explicitly say that it can throw this exception
 	public static void printName(String name) throws MyException {
@@ -61,6 +49,17 @@ public class ExceptionPractice {
 		// Finally goes at the end of the try/catch chain and is code that ALWAYS executes regardless of whether an exception was thrown
 		finally {
 			System.out.println("This code ALWAYS runs");
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		callPrintName(null);
+		try {
+			verifyStringIsAge("20fd");
+			System.out.println("The string was valid");
+		} catch (MyException e) {
+			System.out.println("The string provided was not a valid age");
 		}
 	}
 	
