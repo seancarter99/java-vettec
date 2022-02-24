@@ -13,6 +13,10 @@ public class City {
 		
 	}
 	
+	public City(String name) {
+		this.name = name;
+	}
+	
 	public City(String name, long population, State state) {
 		this.name = name;
 		this.population = population;
@@ -44,6 +48,6 @@ public class City {
 	}
 	
 	public String toString() {
-		return this.name + " (" + this.population + ")";
+		return this.name; // + " (" + this.population + ")";
 	}
 }
