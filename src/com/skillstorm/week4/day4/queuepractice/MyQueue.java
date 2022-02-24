@@ -82,7 +82,7 @@ public class MyQueue<T> {
 		return str;
 	}
 	
-	public static void main2() {
+	public static void main(String[] args) {
 		/*
 		 * How does a queue work?
 		 * 
@@ -91,6 +91,7 @@ public class MyQueue<T> {
 		 * Add? Adds item to the back of the queue
 		 */
 		MyQueue<City> cityQueue = new MyQueue<>();
+		MyQueue<City> copyCityQueue = cityQueue;
 		
 		System.out.println(cityQueue.size() + " " + cityQueue);
 		
@@ -123,19 +124,6 @@ public class MyQueue<T> {
 			e.printStackTrace();
 			System.err.println("You can't poll an empty queue!");
 		}
-		
-	}
-	
-	public static void main(String[] args) {
-		main2();
-		System.out.println("Finished main2!");
-		main3();
-
-	}
-
-	private static void main3() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
