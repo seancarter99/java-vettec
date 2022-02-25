@@ -132,6 +132,11 @@ public class MyStack<T> {
 		System.out.println(mary);
 		System.out.println(mary.toUpperCase());
 		
+		System.out.println(names);
+		names.pop();
+		System.out.println(names);
+
+		
 		
 		/*
 		 * MyStack is the data type or class

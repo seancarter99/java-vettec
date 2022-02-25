@@ -32,7 +32,6 @@ public class IceCreamShop {
 	 * HINT: For IceCream comparison, compare the two Ice Cream's String flavors
 	 */
 	public void serviceCustomer() {
-		
 	}
 	
 	/*
