@@ -2,6 +2,7 @@ package com.skillstorm.week4.day5;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class Review {
 
@@ -20,6 +21,14 @@ public class Review {
 		System.out.println(copyAL);
 		
 		ArrayList<Integer> prefilledAL = new ArrayList<>(Arrays.asList(7, 8, 9));
+		
+		LinkedList<String> states = new LinkedList<>();
+		states.add("Georgia");
+		states.add("New York");
+		states.add("California");
+		
+		System.out.println(states.poll());
+		
 		
 	}
 

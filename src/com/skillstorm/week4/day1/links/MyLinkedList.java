@@ -110,7 +110,7 @@ public class MyLinkedList<T> {
 	@Override
 	public String toString() {
 		String str = "[";
-		Node<T> currNode = this.head;
+		Node<T> currNode = head;
 		while (currNode != null) {
 			str += currNode.getValue();
 			if (currNode.getNext() != null) {
@@ -140,6 +140,6 @@ public class MyLinkedList<T> {
 		System.out.println(fruits);
 
 		
-		System.out.println(fruits.get(3));
+		System.out.println(fruits.get(2));
 	}
 }
