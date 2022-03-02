@@ -9,6 +9,7 @@ public class Exercise {
 	 */
 	public static HashMap<Character, Integer> countCharacters(String word) {
 		// TODO Return a HashMap containing the number of times each character appeared in the word
+		Character c = word.charAt(0);
 		return null;
 	}
 	

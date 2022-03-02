@@ -95,6 +95,23 @@ public class MyLinkedList<T> {
 		return null; // No value found
 	}
 	
+	public boolean contains(T element) {
+		return searchForElement(head, element);
+	}
+	
+	private boolean searchForElement(Node<T> currNode, T element) {
+		if (currNode == null) {
+			return false; // I've reached the end of the chain, no node was found
+		}
+		if (currNode.getValue() == element) {
+			// I found the item so I return true
+			return true;
+		}
+		
+		// If this node doesn't contain my value, I will "defer" in a sense, and see what the next in line has to say
+		return searchForElement(currNode.getNext(), element);
+	}
+	
 	// Removes the item from the list that matches the specified index and returns it
 	// I choose to return T, just in case they want to use it. They can ignore it if they want
 	public T remove(int index) {
@@ -141,5 +158,19 @@ public class MyLinkedList<T> {
 
 		
 		System.out.println(fruits.get(2));
+		
+		System.out.println(fruits);
+		
+		if (fruits.contains("Honeydew")) {
+			System.out.println("Found honeydew!");
+		} else {
+			System.out.println("No honeydew found");
+		}
+		
+		if (fruits.contains("Strawberry")) {
+			System.out.println("Found strawberry!");
+		} else {
+			System.out.println("No strawberry found");
+		}
 	}
 }
