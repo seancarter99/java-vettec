@@ -99,6 +99,8 @@ public class Driver {
 			System.out.println("The area of this shape is: " + shape.getArea());
 			System.out.println();
 		}
+		
+		driveEntity(() -> System.out.println("Driving my Lambda"));
 	}
 
 }

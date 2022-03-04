@@ -19,7 +19,7 @@ package com.skillstorm.week2.day5;
  * 3. Implementing an interfaces, forces the class to define those methods
  * 4. Classes can only extend from ONE parent class, but they can implement from MANY interfaces
  */
-
+@FunctionalInterface
 public interface Driveable {
 
 	public void driveVehicle(); // I will write the signature for my method, but nothing else

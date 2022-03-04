@@ -2,7 +2,10 @@ package com.skillstorm.week5.day5;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.stream.Stream;
+import java.util.Comparator;
 
 public class FunctionalInterfacePractice {
 
@@ -73,6 +76,91 @@ public class FunctionalInterfacePractice {
 		 */
 		
 		fruits.stream().map(fruit -> fruit.toUpperCase()).forEach(fruit -> System.out.println(fruit));
+		
+//		Stream<String> stream = fruits.stream().map(fruit -> { return "Map: " + fruit; });
+//		stream.forEach(fruit -> System.out.println(fruit));
+//		fruits.stream().forEach(fruit -> System.out.println("forEach: " + fruit));
+		
+		LinkedList<Integer> numbers = new LinkedList<>(Arrays.asList(1, 2, 3, 4, 5));
+		System.out.println(numbers);
+		
+		numbers.stream().forEach(number -> {
+			System.out.println(number * 2);
+		});
+		
+		Stream<Integer> doubledNumbers = numbers.stream().map(number -> {
+			return number * 2;
+		});
+		
+		/*
+		 * (num, coefficient) -> {
+		 *    return num / coefficient;
+		 * }
+		 */
+		
+		int[] myNums = {1, 3, 5, 7, 9};
+		// for each number in the array, run this function
+		forEach(myNums, (num, coefficient) -> {
+			System.out.println(num * coefficient);
+		});
+		
+		// Same thing, no lambda
+		for (int i = 0; i < nums.length; i++) {
+			calcProduct(nums[i], 2);
+		}
+		
+		// for each that calculates subtraction
+		forEach(myNums, (num, otherNum) -> {
+			System.out.println(num - otherNum);
+		});
+		
+		// for each that mods the nums
+		forEach(myNums, (num, modAmount) -> {
+			System.out.println(num % modAmount);
+		});
+//		FruitComparator fc = new FruitComparator();
+		Collections.sort(fruits, (fruit1, fruit2) -> {
+			return fruit2.length() - fruit1.length();
+		});
+		System.out.println(fruits);
+	}
+	
+	public static void forEach(int[] nums, Operation op) {
+		for (int i = 0; i < nums.length; i++) {
+			op.performOperation(nums[i], 2);
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	public static int calcSum(int number, int anotherNumber) {
+		return number + anotherNumber;
+	}
+	
+	public static int calcProduct(int number, int anotherNumber) {
+		return number * anotherNumber;
 	}
 
+	public static int calcQuotient(int dividend, int divisor) {
+		return dividend / divisor;
+	}
+}
+
+class FruitComparator implements Comparator<String> {
+
+	@Override
+	public int compare(String fruit1, String fruit2) {
+		// TODO Auto-generated method stub
+		return fruit1.length() - fruit2.length();
+	}
+	
+}
+
+interface Operation {
+	void performOperation(int num, int coefficient);
 }
