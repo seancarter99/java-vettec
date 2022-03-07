@@ -12,6 +12,6 @@ package com.skillstorm.week5.day5;
 @FunctionalInterface
 public interface Action {
 
-	void act(int num);
+	int act(int num);
 
 }

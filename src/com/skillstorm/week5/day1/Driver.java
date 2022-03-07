@@ -1,6 +1,9 @@
 package com.skillstorm.week5.day1;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 
 public class Driver {
 
@@ -83,5 +86,22 @@ public class Driver {
 		for (Company company : companySet) {
 			System.out.println(company);
 		}
+		
+		HashMap<String, String> companyMap = new HashMap<>();
+		companyMap.put("McDonalds", "6 pc McNuggets");
+		companyMap.put("Burger King", "Whopper");
+		companyMap.put("Chipotle", "Burrito");
+		companyMap.put("Chick-Fil-A", "Chicken Sandwich");
+		companyMap.put("Popeyes", "Chicken Sandwich");
+		
+		HashMap<String, LinkedList<String>> companiesWithFoodItem = new HashMap<>();
+		companiesWithFoodItem.put("Chicken Sandwich", new LinkedList<>(Arrays.asList("Chick-Fil-A", "Popeyes", "KFC")));
+		
+		System.out.println("The most famous item at Burger King is: " + companyMap.get("Burger King"));
+		System.out.println("The most famous item at Chick-Fil-A is: " + companyMap.get("Chick-Fil-A"));
+		
+		HashMap<Integer, Integer> taco = new HashMap<>();
+		taco.put(1, 37);
+		taco.put(2, 25);
 	}
 }

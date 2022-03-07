@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.Comparator;
 
@@ -27,8 +29,8 @@ public class FunctionalInterfacePractice {
 		
 		// I'm passing as the second argument, an implementation for "act"
 //		Action action = num -> System.out.println("Inside lambda expression " + num)
-		actOnArray(nums, num -> System.out.println("The number is " + num));
-		actOnArray(nums, num -> System.out.println("The number doubled is " + (num * 2)));
+//		actOnArray(nums, num -> System.out.println("The number is " + num));
+//		actOnArray(nums, num -> System.out.println("The number doubled is " + (num * 2)));
 		
 		// Java has some prebuilt methods for us
 		
@@ -67,7 +69,7 @@ public class FunctionalInterfacePractice {
 		alteredFruitStream.forEach(fruit -> {
 			System.out.println("My fruit is: " + fruit);
 		});
-
+		
 		// I can rewrite this to chain together my streams
 		/*
 		 * 1. Take my list fruits and turn it into a stream
