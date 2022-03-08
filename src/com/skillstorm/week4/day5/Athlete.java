@@ -141,5 +141,7 @@ public class Athlete implements Comparable<Athlete> {
 		
 		// MyComparator myComparator = new MyComparator();
 		// Collections.sort(athletes, myComparator); // For Comparator
+		
+		
 	}
 }

@@ -87,7 +87,7 @@ public class StreamPractice {
 		
 		// First parameter is my start value
 		// Second is my lambda
-		// That lambda takes two paramters, the accumulated value so far and the current element in the list
+		// That lambda takes two parameters, the accumulated value so far and the current element in the list
 		
 		/*
 		 * This function does this step by step
