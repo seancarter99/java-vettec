@@ -1,0 +1,3 @@
+Hello, my name is Sean.
+I am a programmer proficient in Java and JavaScript.
+Outside of programming, my primary hobbies are hiking, biking, and trying new foods.
