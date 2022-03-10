@@ -147,6 +147,11 @@ public class FileReading {
 		for (Person person : people) {
 			System.out.println(person);
 		}
+		
+		// regex
+		// Regular Expressions
+		String sentence = "Sally's sells, s!!!!!!!ea.shells; by: the:: :sea,,,,,,,,,,, ,,,,,,,,shore";
+		System.out.println(sentence.replaceAll("[^\\w\\s]", ""));
 	}
 
 }
