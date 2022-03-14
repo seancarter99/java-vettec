@@ -52,5 +52,7 @@ public class LambdaReview {
 			System.out.println("The number orignially was: " + num);
 			System.out.println("The number divided by 50 is: " + (num / 50));
 		});
+		
+		
 	}
 }

@@ -35,7 +35,7 @@ public class FileReading {
 			e.printStackTrace();
 		}
 		// Old way without try-with-resources
-//		BufferedReader reader = null
+//		BufferedReader reader = null;
 //		try {
 //			reader = new BufferedReader(new FileReader(filePath));
 //		} catch (FileNotFoundException e) {
