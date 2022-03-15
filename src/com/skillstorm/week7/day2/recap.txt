@@ -1,0 +1,17 @@
+What HTML is:
+- HTML stands for HyperText Markup Language
+- HTML5 is the current and longstanding version of HTML
+- HTML is the common building block of the interet
+- It's syntax uses these tags to symbolize the contents of each
+- It shares its syntax with other ML (most common cousin: XML)
+- XML stands for Extensible Markup Language
+
+Body vs Head
+- The HTML body tag contains the actual page contents
+- Anything we wish to be displayed should go in the body tag
+- The HTML head tag contains all metadata or information about our page
+
+HTML Blocks
+- HTML boils down to two different tags
+- Block style tags
+- Inline tags
