@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Practice</title>
+    <style>
+        div {
+            background-color: red;
+        }
+    </style>
+    <!-- In order to use external CSS files, you must first link it in the head tag -->
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <!--
+        CSS stands for Cascading Style Sheets
+        The cascading bit comes from the ability to override previous styles and have CSS go with
+        whatever the latest style that was applied
+
+        For CSS, there are 3 main ways to use it in an HTML page
+
+        1. Inline Styling using the style attribute
+        2. Use the style tag in the head of the webpage
+        3. Linking a page to a CSS file
+
+        Generally, you should try and exclusively use the third option as it keeps the HTML and CSS
+        separate.
+        Additionally, this gives the ability to reuse these styles elsewhere on other pages
+    -->
+    <div class="big" style="background-color:aquamarine; background-color: coral;">
+        Hello World!
+    </div>
+    <div class="red">Red Div</div>
+    <ul>
+        <li class="red">Hulu</li>
+        <li class="red">Twitter</li>
+        <!-- Elements can have multiple classes by adding a space between class names -->
+        <li class="green big">Wikipedia</li>
+    </ul>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div id="bottom" class="big">The bottom of the webpage</div>
+</body>
+</html>

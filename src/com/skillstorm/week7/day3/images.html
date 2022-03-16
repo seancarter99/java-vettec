@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+</head>
+<body>
+    <!-- 
+        We can add images to our website using the img tag and the src attribute 
+        img is an inline tag, NOT a block tag
+        img is also a self-closing tag
+
+        img has height and width attributes that we can use to resize our image
+        If we only specify eiter one or the other, the image will keep the image proportional to its new dimension
+
+        1000 * 100 pixel image (1000 height * 100 width)
+        Changing the height to 100 would change the total dimension to (100 * 10 pixels)
+    -->
+
+    <img 
+        src="https://www.thespruceeats.com/thmb/8TdnbfpOxT3zPslyFoogXZ0Q_Os=/1959x1469/smart/filters:no_upscale()/basic-rice-and-bean-vegetarian-burrito-3377050-hero-02-925ce8bd71764196b4f9b289716c2fe2.jpg"
+        height="100"    
+    />
+    <img 
+        src="https://www.thespruceeats.com/thmb/8TdnbfpOxT3zPslyFoogXZ0Q_Os=/1959x1469/smart/filters:no_upscale()/basic-rice-and-bean-vegetarian-burrito-3377050-hero-02-925ce8bd71764196b4f9b289716c2fe2.jpg"
+        alt="a juicy burrito"
+        height="500" 
+    />
+
+    <br />
+
+    <!-- Add images stored in our file system -->
+    <img src="./whitedog.jfif" height="200" />
+    
+    <!-- 
+        When adding images to our website, we should ALWAYS use the alt attribute 
+        alt is the alternative text that displays if the picture can't be rendered
+
+        Why use alt?
+        1. Gives us a fallback option if the desired image failed to render or wasn't found
+        2. Gives screenreader support for webcrawlers and blind folk
+    -->
+
+    <img src="./puppy-development.webp" alt="A cute Golden Retriever" height="200" />
+
+    <!-- I can wrap an image in an anchor tag to have the image be a link -->
+    <br />
+    <a href="https://wsimag.com/food-and-wine/38233-pineapple-the-superfood" target="_blank">
+        <img src="https://media.wsimag.com/attachments/9d303a8eaf41531ccb3d591f7db46b76beb4d424/store/fill/1470/827/61b68a4bf7897b5e646e97753a8dc15a020992e571f4d42a9461f72dcd6f/Pineapple-the-superfood.jpg" alt="A pineapple on the beach" height="500" />
+    </a>
+</body>
+</html>

@@ -1,0 +1,63 @@
+/* This is a CSS comment. They are my least favorite comment out of any langauge */
+
+/*
+    CSS Selectors:
+
+    When using CSS, we want to apply styles to specific elements
+    We can get those specific elements that our criteria by using CSS selectors
+
+    Common CSS Selectors:
+    1. tag selector
+       - Works by specifying the tag type
+       - Applies the styles in the curly braces to ALL of that type of tag
+    2. class selector
+       - In HTML, I can add classes to my tags to "classify" them under a common group
+       - HTML elements can have multiple classes and in those cases, each class selector will apply
+    3. id selector
+       - I can use the id attribute to style a specific element
+       - Since id should be unique, I can single out an element and only style that one
+*/
+
+/* 
+    I generally refrain from using the general selectors (niche use cases)
+    However, it's great to apply application wide styles to the page
+
+    Change background of entire webpage
+*/
+
+/* Apply these styles to the HTML and body tags */
+html, body {
+    background-color: rgb(29, 155, 240);
+}
+
+div {
+    background-color: #00ED82;
+}
+
+/* Class selectors are the class name prefixed with a . */
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: rgb(48, 211, 48);
+}
+
+.big {
+    font-size: 32px;
+}
+
+/* Id selectors are the id name prefixed with a # */
+#bottom {
+    background-color: blue;
+    /* We can use the color attribute to change the text color inside the HTML tag */
+    color: #FFFFFF;
+    /* 
+        Font family we specify the fonts from left to right in terms of priority 
+        
+        This means:
+        Try to use Bernard MT Condensed as the font, but if it's not available, try and use
+        Times New Roman, and if that's not available either, default to serif
+    */
+    font-family: "Bernard MT Condensed", "Times New Roman", serif;
+}
