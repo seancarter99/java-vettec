@@ -1,0 +1,74 @@
+/*
+    Box-Model
+
+    The way we arrange the spacing for our HTML block elements
+
+    Box-Model is comprised of 4 distinct pieces:
+
+    1. Margin - The spacing around the border (HTML element)
+    2. Border - The border surrounding our HTML element
+    3. Padding - The spacing between the border and the actual content
+    4. Content - The actual content of the HTML element
+*/
+
+
+.big-border {
+    /* Each div will have a 1px, black border */
+    border: 10px solid black;
+}
+
+.padded {
+    /* Padding on the top and bottom is 10px, padding on the left and right is 5px*/
+    padding: 10px 5px;
+
+    /* Padding on the top is 10px, right padding is 5, bottom is 20, left is 15 */
+    padding: 10px 5px 20px 15px;
+}
+
+.article-header {
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.article-p {
+    margin-left: 3vw;
+    padding: 5px;
+}
+
+.personal-piece {
+    margin-bottom: 5vh;
+}
+
+.card-container {
+    border: 1px solid black;
+    padding: 0px 5px;
+    width: 150px;
+}
+
+.card-image-container {
+    padding: 5px;
+}
+
+.card-image {
+    /* This image takes up all of the room that it is given */
+    width: 100%;
+    height: 100%;
+}
+
+.card-price {
+    margin-right: 10px;
+    text-align: right;
+}
+
+.card-description {
+    padding: 10px;
+}
+
+#circle {
+    border: 1px solid black;
+    border-radius: 100%;
+    background-color: darkcyan;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}

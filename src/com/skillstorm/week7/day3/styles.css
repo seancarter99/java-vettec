@@ -26,10 +26,12 @@
 */
 
 /* Apply these styles to the HTML and body tags */
+/* <html> or <body> */
 html, body {
     background-color: rgb(29, 155, 240);
 }
 
+/* <div></div> */
 div {
     background-color: #00ED82;
 }
@@ -39,6 +41,7 @@ div {
     background-color: red;
 }
 
+/* <div class="green"></div> */
 .green {
     background-color: rgb(48, 211, 48);
 }
@@ -48,6 +51,7 @@ div {
 }
 
 /* Id selectors are the id name prefixed with a # */
+/* <td id="bottom"></td>  */
 #bottom {
     background-color: blue;
     /* We can use the color attribute to change the text color inside the HTML tag */

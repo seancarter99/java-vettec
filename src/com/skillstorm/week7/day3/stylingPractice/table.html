@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table {
+            border: 2px solid black;
+            /* 
+                This property tells my table to smush all of its indivual cell borders together
+            */
+            border-collapse: collapse;
+            width: 1000px;
+            /* 
+                These css properties are inherited unless specified otherwise in the child
+                (Think inheritance overriding)
+            */
+            text-align: center;
+        }
+
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            /* 2px for top and bottom, 5px for left and right */
+            padding: 2px 5px;
+        }
+
+        th {
+            background-color: bisque;
+        }
+
+        /*
+            CSS has things known as "pseudo classes" which allow us to get specific values from 
+            a given selector
+
+            A good example of this is getting all of the even elements from a table
+        */
+
+        tr:nth-child(even) {
+            background-color: rgb(252, 247, 239);
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgb(250, 234, 217);
+        }
+
+        /* 
+            Other useful pseduo classes include hover
+
+            In this case, I only apply the hover styles while the tr is being hovered
+        */
+        tr:hover {
+            background-color: burlywood;
+            /* font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 64px; */
+        }
+
+        td:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        .table-link {
+            text-decoration: none;
+            color: black;
+        }
+
+        .wiki-link {
+            text-decoration: none;
+            color: #4141f5;
+        }
+
+        .wiki-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Color for after a link has already been visited*/
+        .wiki-link:visited {
+            color: rgb(151, 93, 151);
+        }
+
+        /* Color while the link is being activated (clicked) */
+        .wiki-link:active {
+            color:aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>City</th>
+            <th>State</th>
+            <th>Population</th>
+        </tr>
+        <tr>
+            <td><a class="table-link" href="https://en.wikipedia.org/wiki/Jacksonville,_Florida">Jacksonville</a></td>
+            <td>Florida</td>
+            <td>900,000</td>
+        </tr>
+        <tr>
+            <td>New York</td>
+            <td>New York</td>
+            <td>8,000,000</td>
+        </tr>
+        <tr>
+            <td>Seattle</td>
+            <td>Washington</td>
+            <td>724,000</td>
+        </tr>
+        <tr>
+            <td>Dallas</td>
+            <td>Texas</td>
+            <td>1,300,000</td>
+        </tr>
+        <tr>
+            <td>Kansas City</td>
+            <td>Missouri</td>
+            <td>486,000</td>
+        </tr>
+    </table>
+
+
+    <br />
+    <br />
+    <p>
+        By 2015, Kansas was one of the most productive <a class="wiki-link"
+            href="https://en.wikipedia.org/wiki/Agriculture">agricultural</a> states, producing high yields of <a
+            class="wiki-link" href="https://en.wikipedia.org/wiki/Wheat">wheat</a>, <a class="wiki-link"
+            href="https://en.wikipedia.org/wiki/Corn">corn</a>,
+            sorghum, and soybeans. Kansas, which has an area of 82,278 square miles (213,100 square kilometers) is the
+            15th-largest state by area and is the 34th most-populous of the 50 states, with a population of 2,940,865
+            according to the 2020 census. Residents of Kansas are called Kansans. Mount Sunflower is Kansas's highest
+            point
+            at 4,039 feet (1,231 meters).
+    </p>
+</body>
+
+</html>
