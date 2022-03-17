@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="grid.css" />
+</head>
+<body>
+    <!--
+        Flex Boxes are used to store items in either a row or a column
+
+        Grid stores items in a dimensional space of rows AND columns
+
+        To use a grid, we need a grid container to hold our grid items
+    -->
+    <div class="grid-container">
+        <div class="red elem">
+            1
+        </div>
+        <div class="blue elem">
+            2
+        </div>
+        <div class="green elem">
+            3
+        </div>
+        <div class="orange elem">
+            4
+        </div>
+        <div class="purple elem">
+            5
+        </div>
+        <div class="pink elem">
+            6
+        </div>
+        <div style="background-color: rgb(132, 70, 214);" class="elem">
+            7
+        </div>
+        <div style="background-color: teal;" class="elem wide-col">
+            8
+        </div>
+        <div style="background-color: rgb(29, 233, 131); grid-column: 1 / 3;" class="elem">
+            9
+        </div>
+        <div style="background-color: hsl(169, 74%, 94%);" class="elem">
+            10
+        </div>
+    </div>
+</body>
+</html>

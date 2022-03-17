@@ -1,0 +1,54 @@
+.red {
+    background-color: red;
+    /* order: 3; */
+}
+
+.blue {
+    background-color: blue;
+    /* order: 2; */
+}
+
+.green {
+    background-color: green;
+    /* order: 1; */
+}
+
+.elem {
+    width: 10em;
+    height: 10em;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.flex-container {
+    /* 
+        To become a flexbox, I need to signify that is a flexbox using display keyword
+    */
+    display: flex; /* Minimum requirement to get them to appear row by row */
+    flex-direction: row; /* row-reverse, column, column-reverse */
+    background-color: gray;
+    flex-wrap: no-wrap; /* wrap, wrap-reverse */
+    /*
+        Justify content moves the items' position within the container
+
+        Justify content:
+        baseline (default)
+        space-between
+        space-around
+        center
+    */
+    justify-content: space-between;
+    /* gap: 50px; */
+
+    /*
+        Align-items aligns the individual items (elements) of the flex box a certain way on the vertical axis
+
+        baseline (default)
+        flex-start 
+        flex-end
+        center
+        stretch
+    */
+    align-items: flex-end;
+
+}

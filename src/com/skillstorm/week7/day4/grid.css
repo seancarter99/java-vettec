@@ -1,0 +1,55 @@
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.elem {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+}
+
+.wide-col {
+    /* Start at index 1 and have the element span to index 4     
+    _________________
+    |______|____|___|
+    |______|____|___|
+    1      2    3   4
+
+    */
+    grid-column: 2 / 4;
+}
+
+.grid-container {
+    display: grid;
+    /* 
+        For our grids, we need to specify the column structure
+        AKA: How big each column is compared to the total grid
+
+        1. Use percents 50% and 50% for two columns split equally
+        2. Use fractions 1fr 1fr for two columns split equally
+    */
+    grid-template-columns: 3fr 1fr 1fr;
+    /* gap: 10px; */
+}
