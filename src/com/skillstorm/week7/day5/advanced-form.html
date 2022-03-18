@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <!-- 
+        Goal is to combine HTML and CSS to make a presentable form.
+        
+        User registration form
+
+        Data Needed:
+        - First and Last Name <input type="text" />
+        - Date of Birth <input type="date" />
+        - Gender <input type="radio" /> <select> <input type="text" /> 
+        - Email <input type="email" /> <input type="text" />
+        - Phone Number <input type="tel" /> <input type="text" />
+        - City <input type="text" /> <select>
+        - State <input type="text" /> <select>
+        - Country <select>
+        - ZIP <input type="text" />
+        - Street Address 1 <input type="text" required />
+        - Street Address 2 (optional) <input type="text" />
+        - Username <input type="text" />
+        - Password <input type="password" />
+    -->
+    <section class="form-container">
+        <h1>User Registration</h1>
+        <form id="registration-form">
+            <div class="form-row">
+                <div class="form-field">
+                    <div>
+                        <label class="form-label" for="first-name">First Name</label>
+                    </div>
+                    <input id="first-name" class="form-input" name="first-name" placeholder="First Name" required />
+                </div>
+                <div class="form-field">
+                    <div>
+                        <label class="form-label" for="last-name">Last Name</label>
+                    </div>
+                    <input id="last-name" class="form-input" name="last-name" placeholder="Last Name" required />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-field">
+                    <div>
+                        <label class="form-label" for="email">Email</label>
+                    </div>
+                    <input id="email" class="form-input" type="email" name="email" placeholder="Email" required />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-field">
+                    <div>
+                        <label class="form-label" for="state">State/Province</label>
+                    </div>
+                    <input id="state" class="form-input" name="state" placeholder="State" required />
+                </div>
+                <div class="form-field">
+                    <div>
+                        <label class="form-label" for="city">City</label>
+                    </div>
+                    <input id="city" class="form-input" name="city" placeholder="City" required />
+                </div>
+                <div class="form-field">
+                    <div>
+                        <label class="form-label" for="zip">ZIP Code</label>
+                    </div>
+                    <input id="zip" class="form-input" name="zip" placeholder="ZIP Code" required />
+                </div>
+                <div class="form-field">
+                    <div>
+                        <label class="form-label" for="country">Country</label>
+                    </div>
+                    <select id="country" class="form-input" name="country">
+                        <option value="usa">United States of America</option>
+                        <option value="algeria">Algeria</option>
+                        <option value="finland">Finland</option>
+                        <option value="mongolia">Mongolia</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="zambia">Zambia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-field">
+                    <div>
+                        <label class="form-label" for="address1">Address 1</label>
+                    </div>
+                    <input id="address1" class="form-input" name="address1" placeholder="Address 1" required />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-field">
+                    <div>
+                        <label class="form-label" for="address2">Address 2</label>
+                    </div>
+                    <input id="address2" class="form-input" name="address2" placeholder="Address 2" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-field">
+                    <div>
+                        <label class="form-label" for="dob">Birthday</label>
+                    </div>
+                    <input id="dob" class="form-input" type="date" name="dob" required/>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-field">
+                    <div>
+                        <label class="form-label" for="username">Username</label>
+                    </div>
+                    <input id="username" class="form-input" name="username" placeholder="Username" required />
+                </div>
+                <div class="form-field">
+                    <div>
+                        <label class="form-label" for="password">Password</label>
+                    </div>
+                    <input id="password" class="form-input" name="password" type="password" placeholder="Password" required />
+                </div>
+            </div>
+            <div class="form-row">
+                <div><!-- :3 --></div>
+                <input class="form-submit" type="submit" value="Submit" />
+            </div>
+        </form>
+    </section>
+</body>
+</html>
