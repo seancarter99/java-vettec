@@ -20,6 +20,9 @@ cd .. - Navigate up into the parent directory/folder
 
 Git Commands:
 
+git clone <url>
+- Clones the GitHub repository into the local file system and links the two
+
 git add <file>
 - This adds the modified file to be committed (stages for commitment)
 
