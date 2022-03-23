@@ -45,6 +45,7 @@ console.log('Person\'s new sister:', person.sister);
 
 // I want an object to store student data
 
+
 const student = {
     name: {
         first: 'John',

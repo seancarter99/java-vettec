@@ -77,6 +77,7 @@ const b = 'b';
 // b = 'beta'; // Cannot reassign b due to const
 
 function variableHoisting() {
+    const c = 'charlie';
     // Function scope in action
     if (false) {
         var firstName = 'Joe';
