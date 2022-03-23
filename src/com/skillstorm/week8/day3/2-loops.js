@@ -92,4 +92,4 @@ for (let char of str) {
 // Works by enumerating over the indices of our array
 for (let index in str) {
     console.log(index);
-}
+} 
