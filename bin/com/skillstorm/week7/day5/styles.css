@@ -1,0 +1,51 @@
+input {
+    box-sizing: border-box;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.form-row {
+    margin: 0px 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-field {
+    width: 100%;
+}
+
+.form-label {
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.form-input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(230, 229, 229);
+    width: inherit; /* Use whatever value the direct parent is using */
+}
+
+.form-input:focus {
+    outline: none;
+    border: 2px solid rgb(155, 153, 153);
+}
+
+.form-submit {
+    border: none;
+    border-radius: 10px;
+    background-color: #36CA94;
+    color: white;
+    padding: 0.75rem 0.5rem;
+    width: 25%;
+}
+
+.form-submit:hover {
+    background-color: #2cb381;
+}

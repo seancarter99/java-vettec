@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <!--
+        Forms are good to fill out questions and collect data from a user
+
+        We can have the user fill out data such as name, age, address, zip, ssn, username, password
+
+        Forms are commonly used for account registration/login or surveys
+
+        We can achieve the same functionality with HTML by using various tags such as:
+        - form
+        - input
+        - select
+        - button
+
+
+        Input is the most ubiquitous tag of all and is multi faceted
+
+        I can use an input tag for:
+        - text (default)
+        - number
+        - date
+        - radio buttons
+        - checkboxes
+        - file uploads
+        - password
+        - email
+
+        Biggest recommendation for input of number type:
+
+        DO NOT USE INPUT NUMBER FOR ANYTHING THAT'S A NUMBER. ONLY USE IT FOR WHEN IT'S SOMETHING YOU'D USE 
+        ARITHMETIC ON
+
+        Don't use it on ZIP code or phone numbers
+    -->
+
+    <!-- 
+        Form should represent an area where a user fills out some amount of data 
+
+        Form has two unique attributes:
+        method - HTTP method (Only accepts get/post)
+        action - URL to shoot the HTTP request off to
+
+        Whenever you submit the form, redirect me to google.com
+    -->
+    <form method="GET" action="https://www.google.com">
+        <div>
+            <!-- Adds semantic meaning stating that this label is associated with this form field -->
+            <label for="first-name">First Name: </label>
+            <!-- The name attribute is what's used to extract the data from the input after form submission -->
+            <input id="first-name" type="text" name="first-name" placeholder="First Name" required />
+        </div>
+        <div>
+            <label for="phone">Telephone Number: </label>
+            <input id="phone" type="tel" name="phone" placeholder="(000)-000-0000" required />
+        </div>
+        <div>
+            <p>
+                Who is the first United States President?
+            </p>
+            <!-- Radio buttons must be added to the same radio group to work properly -->
+            <div>
+                <label for="1a">A</label>
+                <input id="1a" type="radio" value="a" name="q1" />
+                <span>George Washington</span>
+            </div>
+            <div>
+                <label for="1b">B</label>
+                <input id="1b" type="radio" value="b" name="q1" />
+                <span>Benjamin Franklin</span>
+            </div>
+            <div>
+                <label for="1c">C</label>
+                <input id="1c" type="radio" value="c" name="q1" />
+                <span>Thomas Jefferson</span>
+            </div>
+            <div>
+                <label for="1d">D</label>
+                <input id="1d" type="radio" value="d" name="q1" />
+                <span>King George III</span>
+            </div>
+
+
+        </div>
+
+        <div>
+            <p>
+                Which of the following are European countries?
+            </p>
+            <!-- Radio buttons must be added to the same radio group to work properly -->
+            <div>
+                <input id="2a" type="checkbox" value="a" name="q2" />
+                <span>Germany</span>
+            </div>
+            <div>
+                <input id="2b" type="checkbox" value="b" name="q2" />
+                <span>Spain</span>
+            </div>
+            <div>
+                <input id="2c" type="checkbox" value="c" name="q2" />
+                <span>Egypt</span>
+            </div>
+            <div>
+                <input id="2d" type="checkbox" value="d" name="q2" />
+                <span>Poland</span>
+            </div>
+
+
+        </div>
+
+        <div>
+            <label for="dob">Birthday: </label>
+            <input id="dob" type="date" name="dob" />
+        </div>
+
+        <div>
+            <label for="color">Color: </label>
+            <input id="color" type="color" name="color" />
+        </div>
+
+        <div>
+            <label for="make">Make</label>
+            <select id="make" name="make">
+                <option value="default"></option>
+                <option value="ford">Ford</option>
+                <option value="toyota">Toyota</option>
+                <option value="honda">Honda</option>
+                <option value="vw">Volkswagen</option>
+                <option value="mercedes">Mercedes-Benz</option>
+                <option value="chevy">Chevrolet</option>
+            </select>
+        </div>
+
+        <div>
+            <!-- Reset button will remove all of the data entered so far in my form -->
+            <button type="reset">Reset</button>
+            <button type="button">Do Nothing Button</button>
+            <!-- Submit buttons are a special type of button that submits the form its contained in -->
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>

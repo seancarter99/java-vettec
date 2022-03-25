@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Elements With A Form</title>
+    <script src="./form.js"></script>
+</head>
+<body>
+    <form id="person-form">
+        <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" />
+        </div>
+        <div>
+            <div>
+                <label for="male">Male</label>
+                <input id="male" type="radio" name="gender" value="Male" />
+            </div>
+            <div>
+                <label for="female">Female</label>
+                <input id="female" type="radio" name="gender" value="Female" />
+            </div>
+            <div>
+                <label for="other">Other</label>
+                <input id="other" type="radio" name="gender" value="Prefer Not To Say" />
+            </div>
+        </div>
+        <div>
+            <label for="dob">Birthday</label>
+            <input id="dob" type="date" name="dob" />
+        </div>
+        <div>
+            <label for="favorite-color">Favorite Color</label>
+            <input id="favorite-color" type="color" name="favorite-color" />
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Birthday</th>
+        </thead>
+        <tbody id="table-body">
+
+        </tbody>
+    </table>
+</body>
+</html>

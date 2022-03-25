@@ -1,0 +1,39 @@
+What is GitHub?
+
+- GitHub is a popular software versioning system
+- It acts as a central repository for all of your code and files
+- Think of it as your project folder and all its files stored online in the cloud
+- If anyone else in the world wants to use what you've written, they can pull your code and use it
+
+File commands:
+
+ls - List
+
+ls - lists all the folders and files in the current directory
+ls <file-name> - lists all the folders and files in the directory specified
+
+cd - Change directory
+
+cd <file-name> - Navigate into the specified file (if it exists)
+cd .. - Navigate up into the parent directory/folder
+
+
+Git Commands:
+
+git clone <url>
+- Clones the GitHub repository into the local file system and links the two
+
+git add <file>
+- This adds the modified file to be committed (stages for commitment)
+
+git commit -m "<message>"
+- This commits in bulk all of the added files under one commit message
+- The commit message should be descriptive of what actually changed about the file
+
+git push
+- Pushes all of the commited code to GitHub repository
+
+git pull
+- Pulls all of the commits not found in the local environment into the local environment
+- If the main repository has the commit, but the local doesn't, git pull will add it
+- In general, git pull then git push

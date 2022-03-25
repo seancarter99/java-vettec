@@ -1,0 +1,20 @@
+#item-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(204, 201, 201);
+    align-items: center;
+    gap: 10px;
+}
+
+.item {
+    background-color: aliceblue;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.item:nth-child(even) {
+    background-color: darkslategray;
+    color: white;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: black;
+        }
+    </style>
+    <script>
+        /**
+         * This function takes a color as a parameter and changes all boxes to be that color
+         */
+        function changeColor(color) {
+            let boxes = document.getElementsByClassName('box');
+            // for (let i = 0; i < boxes.length; i++) {
+            //     boxes[i].style.backgroundColor = color;
+            // }
+            for (let box of boxes) {
+                box.style.backgroundColor = color;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <button onclick="changeColor('blue')">Change box color to blue!</button>
+    <button onclick="changeColor('black')">Change box color to black!</button>
+    <button onclick="changeColor('#A141D0')">Change box color to purple!</button>
+
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

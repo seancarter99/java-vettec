@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS in HTML</title>
+    <script>
+        // Everything I write in here will be treated as JavaScript
+
+        let count = 0;
+
+        function incrementCount() {
+            count++;
+            console.log(count); // Console.log just prints to the console. I need to put the text somewhere
+            // alert(count); // Alert "alerts" the user by displaying a dropdown with the alert message
+                             // at the top of the page
+            /**
+             * To display this count on the page, I first need an HTML element to hook it up to
+             * 
+             * How do I refer to a specific HTML element?
+             * Answer: id
+             * 
+             * 
+             */
+
+             // I can use document.getElementById() to get a specific HTML element with that id
+             let currentCountDiv = document.getElementById('currentCount');
+             // I am storing the div's data inside currentCountDiv variable
+             // innerText is a property on an HTML element that I can use to alter the text inside an element
+             currentCountDiv.innerText = `The current count is: ${count}`;
+             if (count >= 10) {
+                document.getElementById('incrementCountButton').removeEventListener('click', incrementCount);
+             }
+        }
+
+        // Without using onclick HTML attribute, I can actually use an eventListener to add an "event" to my element
+
+        // let countButton = document.getElementById('incrementCountButton');
+        // I can add a specific event handler to my function whenever some predefined event occurs
+        // addEventListener takes in the type of event as well as a callback function
+
+        // A callback function is nothing more than a function that will be called at a later point in time
+        // countButton.addEventListener('click', incrementCount);
+
+        // To solve the race condition I have two solutions
+        // 1. Move the script tag to the bottom of the body
+        // 2. Add a new event for when the HTML page actually loads
+
+        // Adds an event to the browser to run the callback once the DOM has finished loading
+        window.addEventListener('DOMContentLoaded', () => {
+            let countButton = document.getElementById('incrementCountButton');
+            countButton.addEventListener('click', incrementCount);
+        });
+    </script>
+</head>
+<body>
+    <div id="currentCount">The current count is: 0</div>
+    <button id="incrementCountButton">Click Me!</button>
+    <button onclick="incrementCount()">Click Me Too!</button>
+</body>
+</html>

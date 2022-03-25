@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <style>
+        .box {
+            border: 3px solid black;
+            height: 100px;
+            width: 100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .bg-color {
+            /* background-color changes the actual background of the element to a color */
+            background-color: fuchsia;
+        }
+
+        .text-color {
+            /* Color changes the text color of the element and all child elements */
+            color: blue;
+        }
+
+        .hoverable {
+
+        }
+
+        .hoverable:hover {
+            opacity: 25%;
+        }
+
+        .image-container {
+            background-image: url("./cow.jfif");
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box bg-color text-color">
+        Hello, I am a box.
+    </div>
+    <div class="image-container">
+        <img class="hoverable" src="./rooster-Rhode-Island-Red-roosters-chicken-domestication.webp" alt="a chicken" />
+    </div>
+</body>
+</html>

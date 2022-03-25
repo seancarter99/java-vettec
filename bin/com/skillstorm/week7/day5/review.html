@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <style>
+
+        /* 
+            Changing HTML and Body tags are a great way to apply global styles.
+            Just don't get carried away with it
+        */
+        html {
+
+            background-color: beige;
+        }
+
+        body {
+            /* 
+                Removes the default margin
+            */
+            margin: 0;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+
+        .red {
+            /* 
+                Absolute sizing units
+                px - The actual amount of pixel length to take up
+
+                Relative sizing units
+                rem - Scaled based on the root element's (html/body) font size
+                em - Scaled based on its own font size
+                vw - view width (10vw is 10% of the total viewing width (width of the screen))
+                vh - view height (20vh is 20% of the total viewing height)
+            */
+            background-color: red;
+            font-size: 24px;
+            height: 50vh;
+            width: 33vw;
+            text-align: center;
+        }
+
+        .green {
+            background-color: green;
+            font-size: 24px;
+            height: 50vh;
+            width: 33vw;
+            text-align: center;
+        }
+
+        .blue {
+            background-color: blue;
+            font-size: 24px;
+            height: 50vh;
+            width: 33vw;
+            text-align: center;
+        }
+
+        .header-text {
+            font-size: 50px;
+            color: rgb(190, 87, 87);
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .article-text {
+            font-size: 32px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: purple;
+        }
+
+        .big-padding {
+            /*       T     R    B    L                  */
+            padding: 10px 10px 50px 20px;
+
+            /*        T   L+R  B             */
+            padding: 10px 0px 5px;
+        }
+
+        .big-red {
+            background-color: red;
+            height: 500px;
+            width: 100vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="https://www.google.com">
+            <div class="red">
+                <span class="header-text">Hello World!</span>
+            </div>
+        </a>
+        <a href="https://www.google.com">
+            <div class="green">
+                <span class="header-text">Hello</span> World!
+            </div>
+        </a>
+        <a href="https://www.google.com">
+            <div class="blue big-padding">
+                <span class="header-text">Hello World!</span>
+            </div>
+        </a>
+    </div>
+
+    <p>
+        <span class="article-text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, mollitia nesciunt, consequuntur aliquid
+            error
+            ducimus cum in quasi harum qui repellendus iure enim dolorem quod, ea veniam ad obcaecati ipsum.
+            Quas ipsum laudantium corporis placeat! Sunt iste ut architecto esse id eveniet nemo dolore alias aspernatur
+            fugiat? Maxime tempora architecto libero quas, debitis, at earum laudantium pariatur atque ab porro.
+            Provident, dolores. Voluptatibus asperiores tempore culpa cum, veritatis illum libero officiis animi
+            eligendi
+            similique dolorem reiciendis commodi laborum numquam, ullam repellendus. Quo aspernatur ipsa eaque quia,
+            harum
+            pariatur earum dolorem.
+            In quia, officiis alias natus, maiores quisquam eos tempore nostrum quae dolore vel, possimus voluptatum
+            nihil
+            dignissimos iusto odio molestiae suscipit vero velit. Laboriosam, quaerat veritatis? Error reprehenderit
+            quae
+            odit.
+            Tempora a neque voluptatum debitis facere tenetur. Odio laudantium obcaecati, itaque reiciendis, expedita
+            deleniti accusamus, consequuntur quasi perspiciatis voluptas quaerat aliquid aspernatur ducimus commodi
+            tempora
+            ut modi dicta! Est, totam.
+        </span>
+    </p>
+    <p>
+        <span>fadsfpdasfjda;ksfadfdasfad</span>
+    </p>
+
+    <div class="big-padding" style="background-color: aquamarine;">
+        Sample Text
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="big-red">
+        1
+    </div>
+</body>
+
+</html>
