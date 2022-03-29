@@ -15,7 +15,7 @@ public class MyStack<T> {
 	private int size;
 
 	public MyStack() {
-		
+
 	}
 	
 	/*

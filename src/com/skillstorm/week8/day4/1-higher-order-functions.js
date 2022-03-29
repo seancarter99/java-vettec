@@ -7,7 +7,6 @@
 
 function timesX(x) {
 
-
     // Anonymous Function
     // It has no name because it needs no name
     return function(number) {
