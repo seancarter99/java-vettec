@@ -1,5 +1,7 @@
 package com.skillstorm.week2.day4;
 
+import java.util.ArrayList;
+
 public final class HouseCat extends Feline {
 	
 	// Even though it's not listed, HouseCat still has a breed, a color, an age.
@@ -21,6 +23,8 @@ public final class HouseCat extends Feline {
 	
 	public void printName() {
 		System.out.println(this.getName());
+		final ArrayList<String> arr = new ArrayList<>();
+		arr.add("");
 	}
 	
 	// Cannot override due to the final descriptor on the Feline's speak method
