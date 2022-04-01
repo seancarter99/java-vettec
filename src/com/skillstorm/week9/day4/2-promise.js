@@ -13,7 +13,7 @@
  */
 
 // Creating a Promise
-const createPromise = (msg, sender) => {
+function createPromise(msg, sender) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (sender === 'Sean') {
@@ -23,6 +23,14 @@ const createPromise = (msg, sender) => {
         }, 2000);
     });
 }
+
+createPromise('This is my message', 'Sean', 'P Sherman 42 Wallaby Way Sydney');
+
+const anotherPromise = new Promise((resolve) => {
+    resolve('Hello World!');
+});
+
+anotherPromise.then(data => console.log(data));
 
 // console.log('Creating first Promise');
 // const myPromise = createPromise('Hello World!');

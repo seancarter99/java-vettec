@@ -44,7 +44,7 @@ const validateNumber = async (num, msg) => {
         // return Promise.reject('Number cannot be less than 0!');
         throw 'Number cannot be less than 0!'; // Returns a rejected Promise with the thrown data
     }
-    return msg;
+    return msg; // Returns a fulfilled Promise with msg as the data
 }
 
 // Async functions can only call other async functions
@@ -61,3 +61,11 @@ const asyncWithTryCatch = async () => {
 }
 
 asyncWithTryCatch();
+
+
+function calcSum(x, y) {
+    console.log('Hello!');
+    return x + y;
+}
+
+console.log("The sum of this is: " + calcSum(2, 3));

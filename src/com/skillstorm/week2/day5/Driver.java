@@ -24,6 +24,10 @@ public class Driver {
 		// I know for sure at this point that calling this method is safe, because every Driveable object
 		// MUST have driveVehicle implemented
 		methodOfTransport.driveVehicle();
+		String s = "hello";
+		String newS = s.toUpperCase();
+		// newS = HELLO
+		// s = hello
 	}
 	
 	
