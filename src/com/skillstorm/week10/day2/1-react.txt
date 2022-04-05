@@ -1,0 +1,40 @@
+What is React?
+
+- React is a JavaScript UI Library (Framework)
+- Developed by Facebook (now Meta)
+- Utilizes a component based system for designing parts of a page in a reusable way
+- Allows us to separate logic into reusable components that each handle their own internal state
+- React takes HTML and brings it into the JS file
+- Frameworks like Angular or Vue work the opposite and add JS to the HTML files
+
+Why React?
+
+Virtual DOM
+- It is a measure React has put in place to optimize the alteration of the normal JS DOM there
+- It works by maintains an old copy of the virtual DOM and a new copy whenever the state of 
+  application is changed. Then, it only changes what actually changed
+- React believes that what is displayed should be a reflection of the application's state
+  - React is a function where View = function(state)
+- React interfaces with the DOM to intelligently only rerender elements that have had their state changed
+
+State
+- State is the internal behavior or data of an application/component
+  - Ex. current count for a counter, the data currently input into a form, 
+    whether a display is open or closed, etc.
+- To update the view we update the state
+- The view itself CANNOT update the state
+- One Way Data Binding (State can update view, but view cannot update state)
+- If I want the view to update the state, I must explicitely write a way for it to do so
+
+JSX
+- JavaScript and XML
+- Not actually XML, it just borrows the syntax
+- We can use it to write "HTML" in the JS code
+- Under the hood, JSX is simply JavaScript code
+- Babel converts the JSX into React.createElement()
+
+Components
+- A mechanism for separating logic into reusable parts used to create a larger application
+- A large application is comprised of many different components
+- Each component is in charge of its own state
+- When that component's state changes, React will rerender based off what changed

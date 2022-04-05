@@ -1,0 +1,11 @@
+<?xml version="1.0.0" encoding="UTF-8"?>
+<library>
+    <bookshelf>
+        <book title="Pride and Prejudice" author="Jane Austen" />
+        <book title="The Adventures of Tom Sawyer" author="Mark Twain"/>
+    </bookshelf>
+    <bookshelf>
+    </bookshelf>
+    <bookshelf>
+    </bookshelf>
+</library>
