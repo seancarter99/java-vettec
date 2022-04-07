@@ -1,4 +1,5 @@
 import { Header } from './components/Header.jsx'; // .js/.jsx is OPTIONAL
+import { Counter } from './components/Counter.jsx';
 
 // This works the same
 // function App() {
@@ -14,13 +15,13 @@ const App = () => {
         // This is a fragment and it does not render to the page
         // It's useful for returning 2+ JSX elements
         <>
-            <Header />
-            <Header />
-            <Header />
-            <p>
+            {/* <Header /> */}
+            <Counter />
+            {/* <Counter /> */}
+            {/* <p>
                 Today we are practicing React. React is a cool UI library.
-            </p>
-            
+            </p> */}
+
         </>
     );
 }
