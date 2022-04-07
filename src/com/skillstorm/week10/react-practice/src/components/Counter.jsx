@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react';
  * useEffect - hooks into a component's lifecyle
  */
 
+// Function Component
 export const Counter = () => {
     
     // let count = 0; // This doesn't work since React doesn't know it is 'state'
@@ -20,6 +21,10 @@ export const Counter = () => {
     // I can have another useEffect
     useEffect(() => {
         console.log('I am born!');
+        // If useEffect returns a function, it will be used whenever the component unmounts
+        return () => {
+            console.log('Goodbye!');
+        }
     }, []); // Runs ONLY once as soon as the component is first rendered to the page
 
     useEffect(() => {

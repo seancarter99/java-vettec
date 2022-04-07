@@ -1,11 +1,12 @@
-// This is a Header component
-// Whenever I use <Header /> it translates to <h1>Hello World</h1><h2>Made By: Sean Carter</h2>
+// props are the properties passed in by the parent
+// I can destructure the props object and pull out what I need
 
-export const Header = () => {
+export const Header = (props) => {
+    console.log(props);
     return (
-        <>
-            <h1>Hello World!</h1>
-            <h2>Made By: Sean Carter</h2>
-        </>
+        <header>
+            <h1>{props.title}</h1>
+            <h2>Made by: {props.author}</h2>
+        </header>
     );
 }
