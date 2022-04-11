@@ -44,6 +44,12 @@ git branch -D <branch>
 
 git checkout <branch>
 - Changes the current branch to the one specified
+- Similar to "cd" command
 
 git remote prune origin
 - Removes all branches in the remote repository that are no longer up on the website
+
+git pull
+- Pulls all recent commits and newly added branches from the website onto your local computer
+- Very important as it gives you access to any changes your partner has made
+- git pull pulls from whatever branch you're currently on
