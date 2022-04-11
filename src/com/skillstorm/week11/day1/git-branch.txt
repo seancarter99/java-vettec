@@ -55,4 +55,4 @@ git merge <branch>
 git pull
 - Pulls all recent commits and newly added branches from the website onto your local computer
 - Very important as it gives you access to any changes your partner has made
-- git pull pulls from whatever branch you're currently on
+- git pull pulls from whatever branch you're currently on.
