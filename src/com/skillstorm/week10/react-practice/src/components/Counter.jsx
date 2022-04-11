@@ -57,3 +57,30 @@ export const Counter = () => {
         </>
     );
 }
+
+const props = {
+    title: 'counter',
+    initialCount: 0,
+    children: null
+}
+
+// const data = Counter(props); // <Counter title="counter" initialCount={0} />
+
+// const MyComp = (props) => {
+//     return (
+//         <>{props.title}</>
+//     );
+// }
+
+// <MyComp title="My Component" />
+
+// const obj = {
+//     title: 'My Component',
+//     children: null,
+//     handleSubmit: function(e) {
+//         e.preventDefault();
+//         console.log(data); // data being component state
+//     }
+// }
+
+// MyComp(obj);

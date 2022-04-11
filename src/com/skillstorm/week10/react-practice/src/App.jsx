@@ -4,6 +4,11 @@ import { ClassCounter } from './components/ClassCounter.jsx';
 import { Header } from './components/Header.jsx';
 import { Footer } from './components/Footer';
 import { Article } from './components/Article.jsx';
+import { InlineStyling } from './components/InlineStyling.jsx';
+import { MyButton } from './components/MyButton.jsx';
+import { StyledArticle } from './components/StyledArticle.jsx';
+import { NavBar } from './components/NavBar/NavBar.jsx';
+import './App.css'; // This overrides the previous styles, because I defined it lower in the tree
 
 // This works the same
 // function App() {
@@ -21,15 +26,49 @@ const App = () => {
         // This is a fragment and it does not render to the page
         // It's useful for returning 2+ JSX elements
         <>
+
+
+            <NavBar />
+            <StyledArticle 
+                className="blog-article"
+                title="React is Awesome!" 
+                author="Sean Carter" 
+                datePublished="04/07/2022"
+            >
+                This is my Article
+            </StyledArticle>
+
+
+
+
+
+
+
+
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+
         {/* By using the Article component, we've made a "reusable component" that makes
             the creation of future articles much easier. I just need to follow this template
         */}
-            <Article title="React is Awesome!" author="Sean Carter" datePublished="04/07/2022">
+        {/* You can't style a component directly, you must instead pass its style
+            on through to an HTML element like <div> or <article>
+        */}
+            <MyButton>Submit</MyButton>
+            <InlineStyling />
+            <Article className="blog-article" title="React is Awesome!" author="Sean Carter" datePublished="04/07/2022">
                 React is so cool!
                 <div>Hey!</div>
             </Article>
             <br />
-            <Article title="React is so Confusing" author="Juhyun Shin" datePublished="01/01/2022">
+            <Article 
+                className="blog-article"
+                id="feature"
+                title="React is so Confusing"
+                author="Juhyun Shin"
+                datePublished="01/01/2022"
+            >
                 React is so so confusing.
             </Article>
             <br />

@@ -1,0 +1,19 @@
+body {
+    background-color: red;
+}
+
+/* 
+    This works, just not as you're intending. Styles only <article> elements, 
+    not <Article /> component
+*/
+/* Article {
+    color: blue;
+} */
+
+.blog-article {
+    color: #101084;
+}
+
+#feature {
+    font-size: 32px;
+}

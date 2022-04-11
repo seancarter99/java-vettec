@@ -6,7 +6,7 @@ export const Article = (props) => {
     console.log('Article Props:', props);
 
     return (
-        <article>
+        <article className={props.className} id={props.id}>
             <Header title={props.title} author={props.author}/>
             <p>
                 {props.children}
