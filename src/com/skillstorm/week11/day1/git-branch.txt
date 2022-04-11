@@ -1,0 +1,49 @@
+What is GitHub Branching?
+
+- Branching allows us to "branch" off of the main code base and work on smaller features
+- They're commonly used in team enivronments due to their ability to separate our features 
+  we're working on
+  - It prevents us from writing over our coworker's work
+
+Common Git Branches
+
+- main/master
+  - Represents the final product or "production build" of our code
+  - Fully featured/tested. I know it works perfectly
+- dev/development
+  - Represents the "in development" software being built
+  - It's the stage right before getting merged onto the main branch
+  - If the code in dev is good to go, we move it to main
+- feature branch
+  - The branch name is determined by what feature of the application you're working in this branch
+  - Feature branches commonly branch off "dev" or another feature branch
+  - Only code related to this feature will be worked on in here
+
+Git Merging
+
+- Merging is the process of moving code from one branch up to another
+- Often paired with merging is something as a "pull request" or "PR"
+  - A pull request is just a request for your manager to approve the changes you've made and
+    merge your code up onto whichever branch (ex. your feature branch to dev)
+
+Merge Conflicts
+
+- Sometimes when merging code from one branch to another, there will be two different versions
+  of the same code
+- To solve this, merge conflicts allow someone (usually a manager/senior developer) to pick and choose
+  which version of the code should be used on the branch
+- Merge conflicts MUST be resolved in order for a successful merge to occur
+
+Useful Git Commands:
+
+git branch -a
+- Lists all of the current branches available
+
+git branch -D <branch>
+- Deletes the current branch from the remote repository
+
+git checkout <branch>
+- Changes the current branch to the one specified
+
+git remote prune origin
+- Removes all branches in the remote repository that are no longer up on the website
