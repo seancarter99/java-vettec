@@ -49,6 +49,9 @@ git checkout <branch>
 git remote prune origin
 - Removes all branches in the remote repository that are no longer up on the website
 
+git merge <branch>
+- Merges all of the latest commits from the specified branch onto the currently checkout branch
+
 git pull
 - Pulls all recent commits and newly added branches from the website onto your local computer
 - Very important as it gives you access to any changes your partner has made
