@@ -1,43 +1,23 @@
-import { useState } from 'react';
-import { Table } from './components/Table';
-import { MovieForm } from './components/MovieForm';
-import { RefExample } from './components/RefExample';
-import { Navigation } from './components/Navigation';
-import ThemeContext, { themes } from './contexts/theme';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Home, Day2, NotFound } from './pages';
+import { AppNav, AppNav2 } from './components/Nav';
 
 function App() {
-  const [movieList, setMovieList] = useState([]);
-  const [theme, setTheme] = useState(themes.light);
-
-  // Changing the theme here will update any component using that context
-  const toggleTheme = () => {
-    if (theme === themes.light) {
-      setTheme(themes.dark)
-    } else {
-      setTheme(themes.light)
-    }
-  }
-
-  const addMovie = (movie) => {
-    // Creates a new array with the contents of the old one PLUS the movie to be added
-    // Then, set the movieList to be that brand new array
-    setMovieList([...movieList, movie]);
-    
-    // Non-Spread equivalent
-    // const moviesCopy = movieList.slice();
-    // moviesCopy.push(movie);
-    // setMovieList(moviesCopy);
-  }
 
   return (
-    <ThemeContext.Provider value={theme}>
-      <Navigation />
-      <Navigation />
-      <MovieForm addMovie={addMovie} />
-      <Table items={movieList} />
-      <RefExample />
-      <button onClick={toggleTheme}>Change Theme!</button>
-    </ThemeContext.Provider>
+    // BrowserRouter allows my React application to switch between pages or views
+    <BrowserRouter>
+      <AppNav /> {/* This Nav component will always render regardless of the page we're at */}
+      <AppNav2 />
+      <Routes>
+        {/* Home will render whenever the website url is visited
+          ex. www.google.com
+        */}
+        <Route path="/" element={<Home />} />
+        <Route path="/day2" element={<Day2 />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

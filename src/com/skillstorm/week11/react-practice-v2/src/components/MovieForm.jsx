@@ -18,13 +18,13 @@ export const MovieForm = (props) => {
     const directorRef = useRef();
     const yearRef = useRef();
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event, shouldAddToFront=false) => {
         event.preventDefault();
         props.addMovie({
             title: titleRef.current.value, 
             director: directorRef.current.value,
             year: yearRef.current.value
-        });
+        }, shouldAddToFront);
 
         titleRef.current.value = null;
         directorRef.current.value = null;
@@ -36,7 +36,12 @@ export const MovieForm = (props) => {
             <input placeholder="Input title" ref={titleRef} />
             <input placeholder="Input director" ref={directorRef} />
             <input placeholder="Input year" ref={yearRef} />
-            <button onClick={handleSubmit} type="button">Submit</button>
+            {/* Known as Currying a function
+                This is nice when you want to call a function with parameters, but don't want
+                it to immediately execute
+            */}
+            <button onClick={(e) => handleSubmit(e)} type="button">Add to End</button>
+            <button onClick={(e) => handleSubmit(e, true)} type="button">Add to Beginning</button>
         </form>
     );
 }
