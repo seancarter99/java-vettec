@@ -12,6 +12,9 @@ export const AppNav = () => {
             <NavItem>
                 <NavLink to="/day2">Day2</NavLink>
             </NavItem>
+            <NavItem>
+                <NavLink to="/useReducer">useReducer</NavLink>
+            </NavItem>
         </Nav>
     );
 }

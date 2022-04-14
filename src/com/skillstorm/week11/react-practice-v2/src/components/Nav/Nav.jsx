@@ -6,7 +6,7 @@ const NavContainer = styled.nav`
     padding: 1.5em 1em;
     font-size: 20px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: ${({jc}) => jc ?? 'flex-start'};
 `;
 
 // This is a reusable Nav component as it is not aware of what it is being passed as children
@@ -14,6 +14,10 @@ const NavContainer = styled.nav`
 // The spreading of props allows for additional "tweaking" of the Nav's behavior
 
 // Extract from props the children and condense the rest into a variable called props
+
+// props:
+// title, subheader, author, children
+
 export const Nav = ({children, ...props}) => {
     return (
         // Spread all of the properties that were condensed onto the NavContainer

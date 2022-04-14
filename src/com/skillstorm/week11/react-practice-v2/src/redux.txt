@@ -1,0 +1,32 @@
+Redux?
+
+- Redux is a state management solution
+- Stores the application's state globablly in a "state store"
+- Helps avoid "prop drilling"
+- "Prop drilling" is the act of passing props down multiple levels to child components
+  even though most of those components do not care about the prop, they just forward it onward
+- Similar to useContext
+
+Flux Pattern:
+- Used by Redux and follows this general procedure
+
+1. An event is triggered (ex. User interaction on button click, or form submit)
+2. An action is dispatched to update the view of the webpage
+3. Reducers receive the action and update the state inside the global store
+4. Any components using that particular state are rerendered with the new state
+5. The view is updated
+
+- Works in a Observer design pattern/ Pub-Sub way
+- Anything subscribed to a particular state will be notified when that state changes
+
+- Similar to a mailing list that you subscribe to
+
+What data should be stored in Redux?
+- Don't just add everything to the store
+  - State that is component specific should be local state to that component
+  - Ex. Counter count, form data
+- Redux should store "application data"
+  - Data that is used across the entire application
+  - Network data that is being pulled by a web server
+- Try to distinguish between component data and application data
+  - If the data is only used locally in a single component, it probably shouldn't go in the store
