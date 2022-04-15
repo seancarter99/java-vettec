@@ -71,3 +71,15 @@ General Step By Step For Creating Branches:
 7. `git commit -m "msg"`
 8. `git push`
 9. Go to website and one pull request for merge
+
+Getting Started on Project:
+1. Have 1 partner create the GitHub repo
+2. That partner clones the repo and runs `npx create-react-app .` inside that cloned repo
+3. `git add`
+4. `git commit -m "msg"`
+5. `git push`
+6. Have the other partner clone the repo `git clone <git-url>`
+7. Navigate to the folder and run `npm install` inside the directory with the package.json
+8. Create your branches and get Started
+
+WHENEVER YOU DO A GIT PULL, ALSO RUN `npm install`

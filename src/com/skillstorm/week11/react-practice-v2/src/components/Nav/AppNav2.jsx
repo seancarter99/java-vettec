@@ -1,6 +1,9 @@
+import { useSelector } from 'react-redux';
 import { Nav, NavItem, NavLink, NavSection } from './index';
 
 export const AppNav2 = () => {
+    const count = useSelector(state => state);
+
     return (
         <Nav>
             <NavSection>
@@ -16,7 +19,7 @@ export const AppNav2 = () => {
                     Goodbye
                 </NavItem>
                 <NavItem>
-                    Test
+                    {count}
                 </NavItem>
                 <NavItem>
                     <NavLink to="/day2">Day 2</NavLink>

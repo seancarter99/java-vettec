@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Home, Day2, UseReducerExample, NotFound } from './pages';
+import { Home, Day2, UseReducerExample, Redux, NotFound } from './pages';
 import { AppNav, AppNav2 } from './components/Nav';
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/day2" element={<Day2 />} />
         <Route path="/useReducer" element={<UseReducerExample />} />
+        <Route path="/redux" element={<Redux /> } />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
