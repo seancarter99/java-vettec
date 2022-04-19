@@ -1,0 +1,124 @@
+What is SQL?
+
+- Stands for "Structured Query Language"
+- Used to be called SEQL which stands for "Structured English Query Language"
+  - That's why people pronounce as "sequel" sometimes
+- It's essentially a way for us to query a database
+  - Specifically, we use it to query a "relational database"
+- SQL was outlined by Edgar Codd and follows the "relational model"
+- There are many different flavors of SQL, each with their own slight nuances, but ALL fulfill
+    the core functionalities set up by Codd
+
+What is MySQL?
+
+- MySQL is a "relational database management system" that utilzes SQL
+- Also known as a RDBMS for short
+  - Where the DB stands for database
+- It is just one of many variants of SQL
+  - Others include PostgreSQL, Oracle, SQLite, SQL Server, and so on
+
+What is a database?
+
+- Databases are great at storing large amounts of data
+- We can use SQL to pull data out from its memory extremely quickly
+  - We accomplish this through SQL queries
+  - SQL queries are just commands for specific data
+
+What is a relational database?
+
+- Pioneered by Edgar Codd back in the 1970s
+- Created as a way to translate the "relational model" to databases
+- It has since become the most popular way of storing data
+- Relational DBs allow us to group our data based on tangible relationships
+- It's what most all SQL databases are based on
+
+NoSQL stands for "Non relational database"
+- MongoDB
+- Redis
+- CouchDB
+- NoSQL generally excels at reading from data, but is bad at joining different tables based 
+  on relationships
+
+Vocabulary
+
+- Tables
+  - DBs store data tables
+  - They store related data in different columns
+- Rows
+  - Individual entry in the table
+- Columns
+  - Represents an individual "field" of the DB
+- Keys
+  - Primary Key
+    - Must guarantee a unique way of identifying a row in a table
+    - Each table can have at MOST 1 primary key
+      - You can have 0, but it's frowned upon
+    - Some value or collection of values that uniquely identifies a row
+    - CANNOT BE NULLABLE
+  - Candidate Key
+    - Is a value or collection of values that COULD be used to uniquely
+      identify a row
+    - A candidate key has the potential to be our primary key
+  - Natural Key
+    - Natural keys are naturally unique and are often good choices for a primary key
+    - Examples: SSN, username, email, SKU, etc.
+  - Artificial Key (Surrogate Key/Synthetic Key)
+    - Keys created for the database in order to uniquely identify a row
+    - Used when there is no reliable candidate key
+    - Takes up more space than necessary since I have to store one more column
+  - Composite Key
+    - Take two or more columns and use them together to form the primary key
+  - Foreign Key
+    - It is a column that refers to the primary key of another table
+    - Used to link/bring two tables together
+    - This starts building relations between tables
+    - The column doesn't have to be the same as the primary key column
+      but it helps for recognition
+  - 1 to 1 (1:1)
+    - Example: A person has one home phone and a phone book has one person per phone
+  - 1 to Many (1:M)
+    - Example: One employee has at most one manager
+               Each manager can have many employees reporting to them
+  - Many to Many (M:N)
+    - Tricky because SQL does not really have a great way of representing these
+    - Example: A playlist can have many songs
+               A song can appear on many playlists
+  - Functional Dependence
+    - A situation where one column is entirely dependent on another
+    - Example: The job title determines how much you make
+  - Lookup Table/Junction Table/Join Table
+    - A table that exists to match data from two other tables
+    - The way we do many to many relationships
+    - Commonly done by taking the PK of one table, the PK of another, and making that
+      them together the PK of the join table. Then just add any columns you want together
+
+All tables SHOULD have something known as a "primary key"
+
+In MySQL, certain columns can be "nullable"
+- This means that if we want, we can omit the value for that particular entry
+- To be considered a Primary Key, the column(s) can NOT be nullable
+- The foreign key however, CAN be null
+
+Data Normalization:
+
+Three Types of Normalization:
+
+1NF:
+- One value per column
+  - I can't have a "sibblings" column done like "Josh, Mark, Mary"
+  - I would need to break it into sibbling_1, sibbling_2, sibbling_n, ...
+- Table MUST have a primary key
+  - If one doesn't exist, create a surrogate/artificial key
+
+2NF:
+- To convert something 2NF, it must first be in 1NF
+- No functional dependencies
+
+3NF:
+- Must be in 2NF first to convert to 3NF
+- No transitive dependencies (a column determined by another)
+  - Example: Birthday -> Age
+  - I could just manually calculate instead of wasting storage
+
+"Every non-key attribute must provide a fact about they key, the whole key,
+ and nothing but the key. So help me Codd"

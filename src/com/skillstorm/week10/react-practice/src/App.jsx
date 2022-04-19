@@ -27,7 +27,6 @@ const App = () => {
         // It's useful for returning 2+ JSX elements
         <>
 
-
             <NavBar />
             <StyledArticle 
                 className="blog-article"

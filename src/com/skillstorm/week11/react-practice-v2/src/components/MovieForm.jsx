@@ -31,6 +31,18 @@ export const MovieForm = (props) => {
         yearRef.current.value = null;
     }
 
+    /**
+     * <div id="myDiv" className="container">Hello World!</div>
+     * 
+     * React.createElement('div', { id="myDiv", class="container" }, "Hello World!");
+     * 
+     * const el = document.createElement('div');
+     * el.id = "myDiv"
+     * el.class = "container"
+     * el.innerText = "Hello World!"
+     * 
+     * <div id="myDiv" class="container">Hello World!</div>
+     */
     return (
         <form style={theme}>
             <input placeholder="Input title" ref={titleRef} />

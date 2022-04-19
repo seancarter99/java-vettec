@@ -3,7 +3,7 @@ import { useState } from 'react';
 /**
  * I want my list to render an infinite number of elements
  */
-export const Table = (props) => {
+export const Table = ({items}) => {
     const [dummyState, setDummyState] = useState(false); 
 
     // I want a state called items
@@ -48,7 +48,8 @@ export const Table = (props) => {
                 </tr>
             </thead>
             <tbody>
-                {props.items.map((movie, index) => {
+                {/* [<div key=1/>, <div key=2/>, <div key=3/> ] */}
+                {items.map((movie, index) => {
                     return (
                         /**
                          * Keys are used by React in order to optimize working with large
