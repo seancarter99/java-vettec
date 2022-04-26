@@ -1,0 +1,127 @@
+What is Maven?
+
+- Created by Apache to reduce the complexity of Java project builds
+- Replaced its predecessor Ant due to its easier to use abilities
+- Maven is a build tool
+- It streamlines the build process
+- Utilizes a POM (Project Object Model) to represent the entire project
+- Encourages best practices as you have to pass software tests to build successfully
+
+Why use Maven?
+
+- Prevents us from having to go out and find each dependency we need out on the internet
+  - A dependency is a third party software that our codebase needs to function
+- It houses all of these third party libraries in one central repository (Maven Central Repository)
+- It is the most widely used build tool in the Java ecosystem (#2 is Gradle)
+- When building the project, it will compile and zip our code into small packages (JAR files, WAR files)
+  - JAR stands for Java ARchive file and it's essentially a compressed executable file of some Java project
+
+Creating a Maven project
+- Archetype Selection
+  - Useful for picking a template Maven project so that you hit the ground running and work with
+    their prebuilt configurations
+- Group Id
+  - Commonly used for denoting the company or organization
+  - For subdomains (ex. security, development, etc.) it is advised to append it to your normal group id
+- Artifact Id
+  - Used to reference your project itself
+  - Project name is commonly used, no spaces
+  - my-example-project
+- Version
+  - Denotes the current version of the project
+  - Broken down into 3 parts (1.2.3)
+  - Major version (1.x.x)
+  - Minor version (x.1.x)
+  - Patch version (x.x.1)
+- Name (optional)
+  - Represents the "human readable" project name
+  - `my-example-project` and turn it into `My Example Project`
+- Description (optional)
+  - Provides a short overview of your project
+- Parent Project (optional)
+  - Allows us to inherit project details from another project
+  - We just need to the Maven project coordinates for the parent project and it will
+    take all the preexisting configuration and add to our project
+
+- Maven Project Coordinates
+  - Takes the group id, artifact id, and version to uniquely identify your Maven project
+  - The three together must be unique across Maven central
+
+# Project Structure
+- src/main/java
+  - This is the primary use folder in a Java project
+  - All source code we write, we will write in there
+- src/main/resources
+  - Static assets
+    - In a web project: HTML/CSS/JS, images, etc.
+  - Configuration files
+    - (properties, .env, yaml, json, etc.)
+- src/test/java
+  - Where we'll place all of our test files
+  - These are used as part of the build process to successfully build
+- src/test/resources
+  - Configuration files for tests
+  - Any static assets for the tests (JS unit tests)
+- JRE
+  - Represents the version of Java Runtime Environment we're using
+  - Maven defaults to using 1.5
+- src
+  - Folder containing the source code
+  - This one is used at runtime (Don't write code here)
+- target
+  - Any build process needs an output directory/folder to store the end product
+  - It's a place to hold the JAR/WAR/POM file we created in the packaging phase
+- pom.xml
+  - A giant configuration file that controls the entire project structure
+
+POM File
+  - Utilizes XML to store configuration details
+  - Most similar to the package.json file from NPM
+  - Allows us to store all configuration details for our project in one spot
+  - The POM file is commonly split up into two main sections
+    - dependencies
+      - Indicates the third party libraries we need for our project to work
+      - Whenever the project is built, Maven will automatically download all of these for our project
+      - All dependencies have a scope specifying which phase of the project it is needed for
+        - By default it is compile
+          - Compile adds it to all classpaths for each phase
+        - test
+          - Indicates that this dependency is only required for testing
+          - It will not be included in the final build of the project
+        - runtime
+          - Indicates that it's not needed during the compilation, but is during the runtime of the project 
+    - plugins
+      - Contains all of the configuration data for our project
+      - Specify things such as the Java Runtime Environment
+
+Downloading Dependencies
+- When downloading dependencies for the first time, it will download them into a local folder on your computer (.m2)
+- It downloads them from the internet at Maven Central Repository (kinda npm).
+
+Maven Build Lifecycle
+- Maven has specific "phases" in the build of a project
+
+1. Validate
+   - Ensures that the project is correct and all necessary is provided
+   - Fails if the project coordinates are missing
+2. Compile
+   - Compiles the source code
+   - Fails if the code doesn't compile (errors)
+3. Test
+   - Runs unit tests on the compiled code
+     - Unit tests test individual components or "units" of our code base (ex. individual functions)
+   - Fails if ANY unit test fails (unless specified otherwise)
+4. Package
+   - Packages the compiled code into the specified format (JAR, WAR, POM, etc.)
+5. Verify
+   - Runs integration tests on the compiled code
+     - Integration tests is the code running as a whole
+   - Fails if the integration test does not pass
+6. Install
+   - Installs the created package (JAR) into the local repository so that it can be used in other Maven projects
+7. Deploy
+   - Takes the created package (JAR) and it publishes it to Maven central (final stage)
+
+- Maven allows the user to specify what phase they'd like to run
+  - This works by running every phase up to that point
+  - If I want to run my Maven as test phase I will run validate, compile, and test, but nothing past test

@@ -1,0 +1,31 @@
+What is Unit Testing?
+
+- Unit testing is the process of writing code to test individual components (units) of our application
+- We should strive to break the function to ensure that it meets quality criteria 
+- We should also strive for 100% code coverage
+  - Every single line of code in our application should be run through our unit tests
+- We should also write code with the intention of it being tested (thinking in terms of edge cases)
+  - Edge cases being null values, small numbers, negative numbers, prime numbers, large numbers (Integer.MAX_VALUE)
+    - I could write a unit test that specifically ensures that integer overflow does not occur (instead it just flatlines)
+
+Test Driven Development
+
+- TDD is that process of writing code with the intention of it being tested
+- I write a function and I immediately write tests for that function
+- It's widely used out in industry because it encourages developers to write good unit tests
+
+JUnit
+
+- JUnit is a library used in Java for unit tests in specific
+- It is the most popular unit testing framework in Java
+- It supports build up and tear down for testing
+- I can write specific methods to be automatically invoked before all tests or in between tests
+- This same principle applies for after all tests or after each test (known as tear down)
+
+Other Types of Testing
+
+Unit - Tests individual functions
+Integration - Tests the code running together
+Regression - These are tests that run whenever new code is added to ensure the new code doesn't break the old code
+UI - Tests the UI to ensure that it displays properly (looks correct on mobile, contains all required fields, etc.)
+Stress - Tests the server's ability to service a large amount of customers
