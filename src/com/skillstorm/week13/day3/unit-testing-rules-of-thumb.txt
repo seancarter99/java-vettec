@@ -1,0 +1,17 @@
+- If a method throws an exception you should ensure that it DOES throw the exception
+  - Additionally, the exception should NOT be thrown in valid cases
+- Run tests for null values
+- When testing numbers, use the rule of "one, none, or some"
+  - Test that it works with a singular value (works because odd numbers are harder to work with (typically))
+    - Also, 1 is a prime number
+  - It's also good to test an even number
+    - This ensures that it works for both odd and even
+  - Test with no values
+    - This will handle empty arrays/null values/etc.
+  - Test with some values
+    - Typically I create a large mock data file (csv) and use the mock data to simulate the actual thing
+  - Test with negative numbers
+    - Often times these will go unnoticed in development
+    - Handles overflow that way (integer overflow)
+- Ask yourself what logical edge cases there are
+  - Things like ties, negative numbers, invalid format, business requirements, etc.

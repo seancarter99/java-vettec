@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- These tags represent aspects of our project and they are all contained 
+		within a project tag representing our project Here we see the data that entered 
+		earlier such as the groupId, artifactId, version (Project Coordinates) -->
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.skillstorm</groupId>
+	<artifactId>maven-training</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Maven Training</name>
+	<description>A project where we can practice using Maven</description>
+
+	<!-- This dependencies we will stick all of our dependencies inside of -->
+	<dependencies>
+		<!-- Copy the dependency tag from the central repository and place it here -->
+		<dependency>
+			<!-- These three are the project coordinates -->
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			
+			<!-- 
+				Scope refers to what phase of the build this dependency is necessary for.
+				By default, it's compile
+			 -->
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.28</version>
+		</dependency>
+	</dependencies>
+	
+	<!-- P tag is for any project configuration such as JRE -->
+	<build>
+		<plugins>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+		</plugins>
+	</build>
+</project>
