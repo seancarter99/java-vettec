@@ -1,0 +1,155 @@
+What is "Full Stack"?
+
+- "Full Stack" is a term used to describe something that encompasses BOTH the "frontend" and the "backend"
+  - The entire company's "tech stack"
+  - A "tech stack" is simply a group of technologies that a given application uses
+- Project 3 full stack tech stack will include Java, JavaScript, Spring Boot, React, MySQL, Material UI
+- A full stack engineer is someone who has a good handle on how things are working from both sides (frontend/backend)
+  - Have a bird's eye view on a project as a whole
+
+Frontend:
+
+- Frontend gets its name because it is "front facing" AKA "client facing"
+- As such, the core values of a frontend application are UI/UX
+  - UI is user interface
+  - UX is user experience
+- At its core are technologies like HTML, CSS, and JavaScript
+- Frontend is the place the client will visit (typically in a web brower, but could be a mobile app)
+  - In order for things to work, the client must download all static assets when visiting the webpage
+    - HTML, CSS, JS, Images, Videos, etc.
+    - React code is a static file when built as it is transpiled to HTML, CSS, and JS when all is said and done
+      - React is client side rendered which means that a user visiting the webpage is given an empty HTML file and a big JS file to build the webpage with
+        - This akin to going to Ikea where you get the parts, but have to build it yourself
+        - Server Side Rendering would be more putting in a request to build a specific product
+- All code written on the frontend is PUBLIC
+  - Anything you write you can assume will be seen by a prying eye
+  - As such, NEVER store anything private or valuable on the frontend
+    - You can see everything since visiting the site downloads all the HTML, CSS, and JS
+    - This is the reason backends exist, since they are private and not publicly accessible
+  - Additionally, we should never trust data coming from the by default
+    - We should assume the worst of it, and work to prove otherwise (input validation/sanitization)
+      - This is done on the backend
+  - In October/November of last year (2021) the mayor of Missouri received a tip from a journalist
+    - The journalist mentioned that there was sensitive info on the government webpage (SSN of thousands of teachers)
+      - Should never be stored on the frontend
+    - The mayor claimed the person hacked into the webpage to steal that data
+      - It's not hacking if all you have to do is Inspect Element
+      - If I can see it in the browser Dev Tools, then it's a massive vulnerability
+
+Backend:
+
+- The backend is the "back side" of the application
+  - It's where we handle sensitive data and/or company algorithms
+  - Useful when we want to handle logic/data that isn't meant to be seen by an end user
+- Often times the backend is referred to as a server
+- Can be done with any programming language
+  - All the language needs to do is listen to a port on a computer for incoming requests
+    - A port is simply an open window on your computer where communication is allowed
+      - Port 80 is a system port commonly used for HTTP
+      - Port 443 is for HTTPS
+      - Port 22 is SSH
+      - Port 23 is Telnet
+    - I can have a server listen on any port of my computer for requests
+    - Since 80 is the default http port, I don't need to specify it in the web browser
+    - These requests come in the form of HTTP
+
+HTTP:
+
+- HTTP stands for "Hypertext Transfer Protocol"
+- In order to have a backend and frontend talk to one another, we needed a protocol to follow
+  - HTTP was the answer
+- HTTP comes with requests and responses
+- HTTP is the langauge of the internet and is what it uses to communicate
+
+HTTP Request:
+- The request is a request to a web server to perform some task
+- To specify what task they need to perform we need to pass a couple different things
+  - Request Line
+    - ex. GET doc/test/index.html HTTP/1.1
+      - GET refers to the HTTP method
+      - doc/test/index.html is the resource we're attempting to get
+      - HTTP/1.1 is the specific version of the HTTP that we're using
+  - Request Headers
+    - Used to specify any information about the request up front
+    - Common headers include:
+      - Content-Type (specifies the type of data the request sent in the body)
+      - Authorization (Pass a badge of sorts indicating your level authorization)
+  - Request Body
+    - The section which contains the data to be sent to an endpoint
+    - Most endpoints ignore the request body for a GET request
+      - Some HTTP methods like a HEAD request does not contain a body
+    - POST requests often store the data they're using to create in the request body
+      - Create an account by passing the data required in the request body
+        - {username: '', password: '', firstName: '', lastName: '', birthday: '', email: ''}
+
+HTTP Methods:
+- HTTP methods allow us to add a layer of semantic meaning to our HTTP requests
+  - Help a server identify what our goal is with a request
+- The big 4 HTTP methods:
+  - GET
+    - The most commonly used HTTP method on the internet
+      - You use whenever you navigate to a website or click a hyperlink
+    - It is used to indicate that the user would like to fetch a resource
+      - It is the "read" of the CRUD acronymn
+  - POST
+    - It is used to indicate the creation of new data
+      - It is the "create" of the CRUD acronymn
+    - If you "post" a blog, you're creating a blog post. POST indicates the same
+    - Often times has a request body containing the data you'd like to create
+    - Will cause side effects due to not being idempotent
+  - PUT
+    - Is is used to update an existing resource
+      - Take out the old value there and put in the new one
+  - DELETE
+    - Deltes a resource/piece of data
+
+- Other HTTP methods:
+  - PATCH
+    - Works very similary to PUT, but instead of putting in an entirely new value, we update a small piece of the old value
+    - PATCH is used for smaller updates (ex. changing user preferences)
+      - Think of patching a tire with a hole in it as opposed to replacing the tire entirely
+  - HEAD
+    - Functionally the same as a GET request in all ways, but name and the fact that it doesn't have a request body
+    - It's commonly used as something of a heartbeat check
+    - Used as a ping of sorts
+
+Idempotency:
+- Idempotency is the ability to apply the same method/function multiple times and have the same effect each time
+- GET is idempotent because we can read the data over and over again and it will never change
+- PUT is idempotent even though I update the item, it will functionally still have the same effect if I change it again
+  - If my goal is to change my name from "Sean" to "John", then change it again to "John" it will still be a job well done since I update Sean -> John -> John. The end result is still my name being John
+- DELETE is also idempotent for the same reasons as PUT
+  - If my goal is to delete something and it's already deleted, it's still a job well done)
+- POST is NOT idempotent because running it multiple times will result in the creation of multiple instances
+
+HTTP Responses:
+- Is the response to an HTTP request and contains an HTTP status code to indicate how the request went
+- The response often contains a response body section with the payload
+- A GET request to https://www.mywebpage.com/users/7 assuming successful might a response like:
+  - 200 OK status with a body of the user data {id: 7, firstName: 'John', lastName: 'Doe', birthday: ''}
+- An HTTP endpoint is set up listening for those requests to /users and will dish up a response for whatever
+  user they're looking for
+
+HTTP Status Codes:
+- HTTP Status Codes are used to describe the outcome of a given request and appear on an HTTP response
+- Different types of status codes:
+  - 1xx
+    - Statuses in the 100s represent informational responses
+    - 100 Continue
+  - 2xx
+    - Statuses in the 200s represent a successful operation
+    - 200 OK
+    - 201 Created
+  - 3xx
+    - Statuses in the 300s represent a redirect (redirect a user to another page)
+    - 307 Temporary Redirect
+    - 308 Permanent Redirect
+  - 4xx
+    - Statuses in the 400s represent a client error (AKA YOU messed up)
+    - 403 Forbidden
+    - 404 Not Found
+  - 5xx
+    - Statuses in the 500s represent a server error (AKA THEY messed up)
+    - 500 Internal Server Error
+    - 502 Bad Gateway
+    - 504 Gateway Timeout
