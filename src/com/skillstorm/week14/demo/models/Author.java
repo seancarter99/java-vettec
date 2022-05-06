@@ -1,10 +1,13 @@
 package com.skillstorm.demo.models;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.lang.Nullable;
@@ -14,7 +17,7 @@ import org.springframework.lang.Nullable;
 public class Author {
 
 	@Id // Indicates that this variable is my primary key
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // MySQL auto increment feature
 	@Column(name = "author_id")
 	private int id;
 	
@@ -24,6 +27,9 @@ public class Author {
 	
 	@Column(name = "last_name")
 	private String lastName;
+	
+	@OneToMany(mappedBy = "author")
+	private Set<BookInfo> bookInfo;
 	
 	// POJO
 	/**
@@ -35,6 +41,10 @@ public class Author {
 	 */
 	public Author() {
 		
+	}
+	
+	public Author(int id) {
+		this.id = id;
 	}
 	
 	public Author(String firstName, String lastName) {

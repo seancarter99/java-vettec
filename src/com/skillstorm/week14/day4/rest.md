@@ -50,6 +50,7 @@ Great for data transfer (not sending HTML pages)
      - ex. https://www.mysite.com/users/28/orders (This implies retrieve ALL orders)
      - ex. https://www.mysite.com/users/28/orders?limit=10 (Implies to retrieve the first 10 orders)
      - ex. https://www.mysite.com/users/28/orders?type=sameDay (Only retrieves orders with same day delivery)
+     - ex. https://www.mysite.com/users/28/orders?limit=10&type=sameDay (Does both)
 5. Versioning
    - Versioning endpoints allows new endpoints to be added without breaking the old ones
    - Imagine I have endpoint /movies which retrieves a movies if they do a GET request
