@@ -235,3 +235,46 @@ AWS offers many services that aid your development needs:
          and have my Elastic Load Balancer automatically start dishing traffic to it
        - If my app is hosted in multiple Availability Zones and one goes down, ELB will auto redirect traffic
          away from the downed EC2
+
+# AWS Global Infrastructure
+
+AWS as a whole is comprised of many different regions around the world with each being added every year
+
+- A "region" is a geographical area comprised of at least 3 availability zones
+- All of the regions can communicate securely using the AWS "backbone"
+  - This is a secure channel that all AWS services communicate on
+  - All data in transit is encrypted
+- An "Availability Zone" (AZ) resides inside of a region and is a physical datacenter
+- All AZs are connected using a secure, high speed cable for low latency and secure communication
+  between AZs
+  - In addition to the cable for low latency, all AZs are strategically placed within 60 miles of one
+    another for even lower latency communication
+- You can host your services on multiple AZs in order to ensure a higher availability/durability
+  - Availability
+    - Having the same service running twice helps lessen the load during high traffic hours
+    - Should some catastrophic occur to one of the AZs you're deployed in
+      - If you had your app placed in two AZs, you would still be up and running (provided those are alright)
+    - This helps us ensure there's no single point of failure in our application
+    - Shoot for the "nine nines" (99.9999999% uptime)
+      - These uptimes get worse the more services you have and the longer the interval
+        - With enough services, it could even lead to a 5% or 10% downtime if you're only 
+          99% uptime (not 99.999999%)
+  - Durability
+    - Having data redundancy/resilience is a key aspect in large enterprise applications
+    - Imagine we have a database, if it fails (and we just have 1), we lose all data
+      - If we create replicas in another AZ, then we can use them as "standby" databases
+      - Standby databases are located in another AZ and whenever data to the main database changes,
+        the data to the standby is synchronously updated
+
+- Depending on the AWS service, some services must be specified at a certain level
+  - Some AWS services are global
+    - This means that they're not bound to a particular region
+    - Ex. AWS Cognito (Authentication)
+  - Some AWS services are regional
+    - This means you would create an instance of that service for a particular region
+    - Some regions may not support a given service
+    - Ex. AWS S3
+  - Some AWS services are based on AZs
+    - This means that you create a specific instance of the service for a given AZ in a region
+    - You're still dependent on the region as to whether the service is supported or not
+    - Ex. AWS EC2
