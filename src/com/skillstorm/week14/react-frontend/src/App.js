@@ -10,7 +10,7 @@ function App() {
   // When my component first renders, grab all of the authors
   useEffect(() => {
     // Make the http request to grab all the authors
-    axios.get(`http://localhost:8080/authors`)
+    axios.get(`${process.env.REACT_APP_API_URL}/authors`)
     .then(({data}) => setAuthors(data))
     .catch(err => console.log(err));
   }, []);
@@ -18,7 +18,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Make a post request to add create a new author
-    await axios.post('http://localhost:8080/authors', {
+    await axios.post(`${process.env.REACT_APP_API_URL}/authors`, {
       firstName: firstNameRef.current.value,
       lastName: lastNameRef.current.value
     });
