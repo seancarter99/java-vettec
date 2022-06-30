@@ -1,7 +1,7 @@
 package com.skillstorm.week4.day4.homework;
 
 import java.util.ArrayList;
-import java.util.PriorityQueue;
+import java.util.LinkedList;
 import java.util.Queue;
 
 public class IceCreamShop {
@@ -9,7 +9,7 @@ public class IceCreamShop {
 	private String name;
 	private double amountEarned;
 	private ArrayList<IceCream> flavors; // Are the allowed flavors at a given store
-	private Queue<Customer> customerLine = new PriorityQueue<>(); // Represents the line of customers at a given store (Each customer has an ice cream)
+	private Queue<Customer> customerLine = new LinkedList<>(); // Represents the line of customers at a given store (Each customer has an ice cream)
 	
 	public IceCreamShop() {
 		
